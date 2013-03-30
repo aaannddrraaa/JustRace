@@ -7,12 +7,18 @@
 //
 
 #import "RaceAppDelegate.h"
+#import <Parse/Parse.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 @implementation RaceAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    [Parse setApplicationId:@"89IKtEo8MJrWF3oy5nfAdgSpcWgjr31KiimQ0Q48"
+                  clientKey:@"ZtFSnMfnfyGLU0KznbUCoIlLeZhOgQbrf4PBUNdl"];
+    [PFFacebookUtils initializeFacebook];
     return YES;
 }
 							
@@ -41,6 +47,11 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [PFFacebookUtils handleOpenURL:url];
 }
 
 @end
