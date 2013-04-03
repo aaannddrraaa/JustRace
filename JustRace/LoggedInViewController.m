@@ -49,7 +49,7 @@
             @"location": userData[@"location"][@"name"]
             };
             
-            //self.nameLabel.text = userProfile[@"name"];
+            self.nameLabel.text =[self.nameLabel.text stringByAppendingString:userProfile[@"name"]];
             
             NSURL *pictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID]];
            

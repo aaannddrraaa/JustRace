@@ -288,35 +288,17 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aau-W4-Hb6">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Welcome, " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aau-W4-Hb6">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="jsf-Fu-R7J"/>
-                                    <constraint firstAttribute="width" constant="130" id="x2b-dr-iev"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XRo-QV-EJq">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="4uW-fb-39c"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Logout">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="logoutButtonTouchHandler:" destination="flV-MU-mpY" eventType="touchUpInside" id="maj-ga-Egt"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fiv-Pp-AVK">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="YEB-JZ-NZl"/>
-                                    <constraint firstAttribute="width" constant="97" id="vCv-74-vUi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Races">
@@ -331,6 +313,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a5x-Et-GYD">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="5m9-7o-vZ1"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Statistics">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -370,23 +355,39 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="XRo-QV-EJq" firstAttribute="bottom" secondItem="Aau-W4-Hb6" secondAttribute="bottom" type="default" id="7tv-kE-Jtz"/>
-                            <constraint firstItem="Fiv-Pp-AVK" firstAttribute="leading" secondItem="ej0-B2-8gt" secondAttribute="leading" constant="11" id="9xX-8a-lXc"/>
-                            <constraint firstAttribute="bottom" secondItem="LiN-Sh-jx7" secondAttribute="bottom" constant="60" id="EBm-pJ-QNn"/>
-                            <constraint firstItem="Fiv-Pp-AVK" firstAttribute="trailing" secondItem="a5x-Et-GYD" secondAttribute="trailing" type="default" id="TvL-nL-gh4"/>
-                            <constraint firstItem="XRo-QV-EJq" firstAttribute="top" secondItem="ej0-B2-8gt" secondAttribute="top" constant="13" id="Z4j-om-xSo"/>
-                            <constraint firstItem="a5x-Et-GYD" firstAttribute="top" secondItem="ej0-B2-8gt" secondAttribute="top" constant="145" id="fNe-co-THB"/>
-                            <constraint firstAttribute="trailing" secondItem="XRo-QV-EJq" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="g0E-96-On1"/>
-                            <constraint firstItem="K8n-Rc-ufY" firstAttribute="trailing" secondItem="a5x-Et-GYD" secondAttribute="trailing" type="default" id="gCI-rG-91H"/>
-                            <constraint firstItem="LiN-Sh-jx7" firstAttribute="leading" secondItem="ej0-B2-8gt" secondAttribute="leading" constant="69" id="jcJ-id-512"/>
-                            <constraint firstItem="Fiv-Pp-AVK" firstAttribute="top" secondItem="ej0-B2-8gt" secondAttribute="top" constant="89" id="kfv-dG-WhU"/>
-                            <constraint firstItem="K8n-Rc-ufY" firstAttribute="leading" secondItem="a5x-Et-GYD" secondAttribute="leading" type="default" id="mpo-Ev-buT"/>
-                            <constraint firstItem="Aau-W4-Hb6" firstAttribute="leading" secondItem="ej0-B2-8gt" secondAttribute="leading" constant="45" id="ndV-GE-tcn"/>
-                            <constraint firstItem="K8n-Rc-ufY" firstAttribute="top" secondItem="ej0-B2-8gt" secondAttribute="top" constant="205" id="pFv-Y8-ouj"/>
-                            <constraint firstItem="a5x-Et-GYD" firstAttribute="leading" secondItem="Fiv-Pp-AVK" secondAttribute="leading" type="default" id="sRt-Ob-7yb"/>
+                            <constraint firstItem="Aau-W4-Hb6" firstAttribute="leading" secondItem="ej0-B2-8gt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="94O-lR-f7y"/>
+                            <constraint firstItem="LiN-Sh-jx7" firstAttribute="centerX" secondItem="Aau-W4-Hb6" secondAttribute="centerX" type="default" id="9RK-e7-4GA"/>
+                            <constraint firstItem="Fiv-Pp-AVK" firstAttribute="top" secondItem="ej0-B2-8gt" secondAttribute="top" constant="101" id="EIF-aq-btB"/>
+                            <constraint firstItem="K8n-Rc-ufY" firstAttribute="trailing" secondItem="a5x-Et-GYD" secondAttribute="trailing" type="default" id="Gy8-WW-NZy"/>
+                            <constraint firstItem="a5x-Et-GYD" firstAttribute="trailing" secondItem="Fiv-Pp-AVK" secondAttribute="trailing" type="default" id="Hgm-BU-qtB"/>
+                            <constraint firstAttribute="bottom" secondItem="K8n-Rc-ufY" secondAttribute="bottom" constant="136" id="JfZ-PV-ULM"/>
+                            <constraint firstItem="Aau-W4-Hb6" firstAttribute="top" secondItem="ej0-B2-8gt" secondAttribute="top" constant="25" id="OBs-po-meN"/>
+                            <constraint firstItem="a5x-Et-GYD" firstAttribute="top" secondItem="ej0-B2-8gt" secondAttribute="top" constant="168" id="RnM-ve-Ofu"/>
+                            <constraint firstItem="a5x-Et-GYD" firstAttribute="leading" secondItem="ej0-B2-8gt" secondAttribute="leading" constant="6" id="S5S-WS-5rh"/>
+                            <constraint firstItem="a5x-Et-GYD" firstAttribute="leading" secondItem="Fiv-Pp-AVK" secondAttribute="leading" type="default" id="c9S-Ac-ydE"/>
+                            <constraint firstItem="K8n-Rc-ufY" firstAttribute="leading" secondItem="a5x-Et-GYD" secondAttribute="leading" type="default" id="g3d-hT-cEC"/>
+                            <constraint firstAttribute="bottom" secondItem="LiN-Sh-jx7" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="jVb-WG-sgL"/>
+                            <constraint firstAttribute="trailing" secondItem="Aau-W4-Hb6" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="kLs-9c-4vR"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Logged In" id="GPU-ub-X35"/>
+                    <navigationItem key="navigationItem" title="Logged In" id="GPU-ub-X35">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="hiS-HP-QHA">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XRo-QV-EJq">
+                                <rect key="frame" x="245" y="6" width="70" height="33"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Logout">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutButtonTouchHandler:" destination="flV-MU-mpY" eventType="touchUpInside" id="maj-ga-Egt"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="myImage" destination="ej0-B2-8gt" id="Th3-vg-Tlj"/>
                         <outlet property="nameLabel" destination="Aau-W4-Hb6" id="6D1-fi-waQ"/>
@@ -602,6 +603,55 @@
             <point key="canvasLocation" x="2124" y="234"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="AllActiveViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AllActiveViewController.h"/>
+        </class>
+        <class className="AllAttendedViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AllAttendedViewController.h"/>
+        </class>
+        <class className="AllOrganisedViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AllOrganisedViewController.h"/>
+        </class>
+        <class className="DistanceViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DistanceViewController.h"/>
+        </class>
+        <class className="LoggedInViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoggedInViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="myImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="MyRacesViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyRacesViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="RaceViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RaceViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="loginButtonTouchHandler:"/>
+            </relationships>
+        </class>
+        <class className="RacesViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RacesViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="allRacesButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="myRacesButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="SpeedViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SpeedViewController.h"/>
+        </class>
+        <class className="StatisticsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StatisticsViewController.h"/>
+        </class>
+        <class className="TimeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TimeViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
