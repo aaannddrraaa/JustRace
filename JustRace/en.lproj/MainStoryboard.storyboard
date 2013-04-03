@@ -140,10 +140,10 @@
             </objects>
             <point key="canvasLocation" x="1839" y="-2008"/>
         </scene>
-        <!--Table View Controller - All Attended-->
+        <!--All Attended View Controller - All Attended-->
         <scene sceneID="8Jv-Kc-Ma9">
             <objects>
-                <tableViewController id="Td6-ML-3ya" sceneMemberID="viewController">
+                <tableViewController id="Td6-ML-3ya" customClass="AllAttendedViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="HWF-cb-nDL">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -170,10 +170,10 @@
             </objects>
             <point key="canvasLocation" x="2597" y="-2907"/>
         </scene>
-        <!--Table View Controller - All Active-->
+        <!--All Active View Controller - All Active-->
         <scene sceneID="VXt-uO-Efy">
             <objects>
-                <tableViewController id="7tk-BQ-CiO" sceneMemberID="viewController">
+                <tableViewController id="7tk-BQ-CiO" customClass="AllActiveViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Mm1-u9-3R6">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -200,10 +200,10 @@
             </objects>
             <point key="canvasLocation" x="2605" y="-2040"/>
         </scene>
-        <!--Table View Controller - All Organised-->
+        <!--All Organised View Controller - All Organised-->
         <scene sceneID="4fE-HY-BjF">
             <objects>
-                <tableViewController id="Bv1-cg-X8i" sceneMemberID="viewController">
+                <tableViewController id="Bv1-cg-X8i" customClass="AllOrganisedViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="exK-4L-UZ2">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -462,10 +462,10 @@
             </objects>
             <point key="canvasLocation" x="1239" y="1145"/>
         </scene>
-        <!--View Controller - Time-->
+        <!--Time View Controller - Time-->
         <scene sceneID="9vs-wS-GDz">
             <objects>
-                <viewController id="tgw-2u-Og1" sceneMemberID="viewController">
+                <viewController id="tgw-2u-Og1" customClass="TimeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HBx-DP-Kpy">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -507,10 +507,10 @@
             </objects>
             <point key="canvasLocation" x="2132" y="1122"/>
         </scene>
-        <!--View Controller - Distance-->
+        <!--Distance View Controller - Distance-->
         <scene sceneID="vT5-oT-3cL">
             <objects>
-                <viewController id="gKb-sG-IGB" sceneMemberID="viewController">
+                <viewController id="gKb-sG-IGB" customClass="DistanceViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZX7-fr-VJB">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -552,10 +552,10 @@
             </objects>
             <point key="canvasLocation" x="2140" y="1978"/>
         </scene>
-        <!--View Controller - Speed-->
+        <!--Speed View Controller - Speed-->
         <scene sceneID="DMA-HK-nmi">
             <objects>
-                <viewController id="muA-m5-R0Z" sceneMemberID="viewController">
+                <viewController id="muA-m5-R0Z" customClass="SpeedViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UtN-Up-Ftz">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -602,37 +602,6 @@
             <point key="canvasLocation" x="2124" y="234"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="LoggedInViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoggedInViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="myImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="MyRacesViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyRacesViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="RaceViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RaceViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="loginButtonTouchHandler:"/>
-            </relationships>
-        </class>
-        <class className="RacesViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RacesViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="allRacesButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="myRacesButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="StatisticsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StatisticsViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

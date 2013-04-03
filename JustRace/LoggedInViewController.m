@@ -49,7 +49,7 @@
             @"location": userData[@"location"][@"name"]
             };
             
-            self.nameLabel.text = userProfile[@"name"];
+            //self.nameLabel.text = userProfile[@"name"];
             
             NSURL *pictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID]];
            
@@ -58,7 +58,7 @@
             NSData *data = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:nil error:nil];
             UIImage *img = [[UIImage alloc] initWithData:data];
             UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(50, 150, 200, 200)];
-            imgView.image = img;
+            //imgView.image = img;
             [self.view addSubview:imgView];
         }
         else if ([error.userInfo[FBErrorParsedJSONResponseKey][@"body"][@"error"][@"type"] isEqualToString:@"OAuthException"])

@@ -36,6 +36,15 @@
 		19CC97141707281500D70DF0 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19CC97131707281500D70DF0 /* AdSupport.framework */; };
 		19CC9716170728BF00D70DF0 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 19CC9715170728BF00D70DF0 /* FacebookSDKResources.bundle */; };
 		19CC9718170728CA00D70DF0 /* FBUserSettingsViewResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 19CC9717170728CA00D70DF0 /* FBUserSettingsViewResources.bundle */; };
+		8C3150CA170C17C300A39561 /* RacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3150C9170C17C300A39561 /* RacesViewController.m */; };
+		8C3150CD170C1B6600A39561 /* MyRacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3150CC170C1B6600A39561 /* MyRacesViewController.m */; };
+		8C3150D0170C1BC200A39561 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3150CF170C1BC200A39561 /* StatisticsViewController.m */; };
+		8C3150D3170C1CB200A39561 /* SpeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3150D2170C1CB200A39561 /* SpeedViewController.m */; };
+		8C3150D6170C1CE500A39561 /* TimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3150D5170C1CE500A39561 /* TimeViewController.m */; };
+		8C3150D9170C1D0A00A39561 /* DistanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3150D8170C1D0A00A39561 /* DistanceViewController.m */; };
+		8C3150DC170C1D3F00A39561 /* AllAttendedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3150DB170C1D3F00A39561 /* AllAttendedViewController.m */; };
+		8C3150DF170C1D6400A39561 /* AllActiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3150DE170C1D6400A39561 /* AllActiveViewController.m */; };
+		8C3150E2170C1D8800A39561 /* AllOrganisedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3150E1170C1D8800A39561 /* AllOrganisedViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +83,24 @@
 		19CC97131707281500D70DF0 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		19CC9715170728BF00D70DF0 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
 		19CC9717170728CA00D70DF0 /* FBUserSettingsViewResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBUserSettingsViewResources.bundle; sourceTree = "<group>"; };
+		8C3150C8170C17C300A39561 /* RacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RacesViewController.h; sourceTree = "<group>"; };
+		8C3150C9170C17C300A39561 /* RacesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RacesViewController.m; sourceTree = "<group>"; };
+		8C3150CB170C1B6600A39561 /* MyRacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRacesViewController.h; sourceTree = "<group>"; };
+		8C3150CC170C1B6600A39561 /* MyRacesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyRacesViewController.m; sourceTree = "<group>"; };
+		8C3150CE170C1BC200A39561 /* StatisticsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatisticsViewController.h; sourceTree = "<group>"; };
+		8C3150CF170C1BC200A39561 /* StatisticsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatisticsViewController.m; sourceTree = "<group>"; };
+		8C3150D1170C1CB200A39561 /* SpeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpeedViewController.h; sourceTree = "<group>"; };
+		8C3150D2170C1CB200A39561 /* SpeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpeedViewController.m; sourceTree = "<group>"; };
+		8C3150D4170C1CE400A39561 /* TimeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeViewController.h; sourceTree = "<group>"; };
+		8C3150D5170C1CE500A39561 /* TimeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeViewController.m; sourceTree = "<group>"; };
+		8C3150D7170C1D0A00A39561 /* DistanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DistanceViewController.h; sourceTree = "<group>"; };
+		8C3150D8170C1D0A00A39561 /* DistanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DistanceViewController.m; sourceTree = "<group>"; };
+		8C3150DA170C1D3F00A39561 /* AllAttendedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllAttendedViewController.h; sourceTree = "<group>"; };
+		8C3150DB170C1D3F00A39561 /* AllAttendedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllAttendedViewController.m; sourceTree = "<group>"; };
+		8C3150DD170C1D6400A39561 /* AllActiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllActiveViewController.h; sourceTree = "<group>"; };
+		8C3150DE170C1D6400A39561 /* AllActiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllActiveViewController.m; sourceTree = "<group>"; };
+		8C3150E0170C1D8800A39561 /* AllOrganisedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllOrganisedViewController.h; sourceTree = "<group>"; };
+		8C3150E1170C1D8800A39561 /* AllOrganisedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllOrganisedViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +187,24 @@
 				19CC96D317071E7000D70DF0 /* Supporting Files */,
 				19CC970E170725BF00D70DF0 /* LoggedInViewController.h */,
 				19CC970F170725BF00D70DF0 /* LoggedInViewController.m */,
+				8C3150C8170C17C300A39561 /* RacesViewController.h */,
+				8C3150C9170C17C300A39561 /* RacesViewController.m */,
+				8C3150CB170C1B6600A39561 /* MyRacesViewController.h */,
+				8C3150CC170C1B6600A39561 /* MyRacesViewController.m */,
+				8C3150CE170C1BC200A39561 /* StatisticsViewController.h */,
+				8C3150CF170C1BC200A39561 /* StatisticsViewController.m */,
+				8C3150D1170C1CB200A39561 /* SpeedViewController.h */,
+				8C3150D2170C1CB200A39561 /* SpeedViewController.m */,
+				8C3150D4170C1CE400A39561 /* TimeViewController.h */,
+				8C3150D5170C1CE500A39561 /* TimeViewController.m */,
+				8C3150D7170C1D0A00A39561 /* DistanceViewController.h */,
+				8C3150D8170C1D0A00A39561 /* DistanceViewController.m */,
+				8C3150DA170C1D3F00A39561 /* AllAttendedViewController.h */,
+				8C3150DB170C1D3F00A39561 /* AllAttendedViewController.m */,
+				8C3150DD170C1D6400A39561 /* AllActiveViewController.h */,
+				8C3150DE170C1D6400A39561 /* AllActiveViewController.m */,
+				8C3150E0170C1D8800A39561 /* AllOrganisedViewController.h */,
+				8C3150E1170C1D8800A39561 /* AllOrganisedViewController.m */,
 			);
 			path = JustRace;
 			sourceTree = "<group>";
@@ -251,6 +296,15 @@
 				19CC96DD17071E7000D70DF0 /* RaceAppDelegate.m in Sources */,
 				19CC96E917071E7100D70DF0 /* RaceViewController.m in Sources */,
 				19CC9710170725BF00D70DF0 /* LoggedInViewController.m in Sources */,
+				8C3150CA170C17C300A39561 /* RacesViewController.m in Sources */,
+				8C3150CD170C1B6600A39561 /* MyRacesViewController.m in Sources */,
+				8C3150D0170C1BC200A39561 /* StatisticsViewController.m in Sources */,
+				8C3150D3170C1CB200A39561 /* SpeedViewController.m in Sources */,
+				8C3150D6170C1CE500A39561 /* TimeViewController.m in Sources */,
+				8C3150D9170C1D0A00A39561 /* DistanceViewController.m in Sources */,
+				8C3150DC170C1D3F00A39561 /* AllAttendedViewController.m in Sources */,
+				8C3150DF170C1D6400A39561 /* AllActiveViewController.m in Sources */,
+				8C3150E2170C1D8800A39561 /* AllOrganisedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
