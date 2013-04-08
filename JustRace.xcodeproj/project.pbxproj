@@ -45,6 +45,16 @@
 		8C3150DC170C1D3F00A39561 /* AllAttendedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3150DB170C1D3F00A39561 /* AllAttendedViewController.m */; };
 		8C3150DF170C1D6400A39561 /* AllActiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3150DE170C1D6400A39561 /* AllActiveViewController.m */; };
 		8C3150E2170C1D8800A39561 /* AllOrganisedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3150E1170C1D8800A39561 /* AllOrganisedViewController.m */; };
+		8CE049E81713167000A9D4BC /* AllRacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE049E71713167000A9D4BC /* AllRacesViewController.m */; };
+		8CE049EB1713196D00A9D4BC /* OrganisedRaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE049EA1713196D00A9D4BC /* OrganisedRaceCell.m */; };
+		8CE049EE1713210900A9D4BC /* OrganisedRaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE049ED1713210900A9D4BC /* OrganisedRaceViewController.m */; };
+		8CE049F11713219100A9D4BC /* ActiveRaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE049F01713219100A9D4BC /* ActiveRaceViewController.m */; };
+		8CE049F41713223100A9D4BC /* ActiveRaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE049F31713223100A9D4BC /* ActiveRaceCell.m */; };
+		8CE049F7171325A600A9D4BC /* AttendedRaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE049F6171325A600A9D4BC /* AttendedRaceCell.m */; };
+		8CE049FA1713264F00A9D4BC /* AttendedRaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE049F91713264F00A9D4BC /* AttendedRaceViewController.m */; };
+		8CE049FD1713271900A9D4BC /* BrowsedRaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE049FC1713271900A9D4BC /* BrowsedRaceCell.m */; };
+		8CE04A03171328C100A9D4BC /* NewRaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE04A02171328C100A9D4BC /* NewRaceViewController.m */; };
+		8CE04A0617132A7800A9D4BC /* BrowsedRaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE04A0517132A7800A9D4BC /* BrowsedRaceViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +111,26 @@
 		8C3150DE170C1D6400A39561 /* AllActiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllActiveViewController.m; sourceTree = "<group>"; };
 		8C3150E0170C1D8800A39561 /* AllOrganisedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllOrganisedViewController.h; sourceTree = "<group>"; };
 		8C3150E1170C1D8800A39561 /* AllOrganisedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllOrganisedViewController.m; sourceTree = "<group>"; };
+		8CE049E61713167000A9D4BC /* AllRacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllRacesViewController.h; sourceTree = "<group>"; };
+		8CE049E71713167000A9D4BC /* AllRacesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllRacesViewController.m; sourceTree = "<group>"; };
+		8CE049E91713196D00A9D4BC /* OrganisedRaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrganisedRaceCell.h; sourceTree = "<group>"; };
+		8CE049EA1713196D00A9D4BC /* OrganisedRaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrganisedRaceCell.m; sourceTree = "<group>"; };
+		8CE049EC1713210900A9D4BC /* OrganisedRaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrganisedRaceViewController.h; sourceTree = "<group>"; };
+		8CE049ED1713210900A9D4BC /* OrganisedRaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrganisedRaceViewController.m; sourceTree = "<group>"; };
+		8CE049EF1713219100A9D4BC /* ActiveRaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActiveRaceViewController.h; sourceTree = "<group>"; };
+		8CE049F01713219100A9D4BC /* ActiveRaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActiveRaceViewController.m; sourceTree = "<group>"; };
+		8CE049F21713223100A9D4BC /* ActiveRaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActiveRaceCell.h; sourceTree = "<group>"; };
+		8CE049F31713223100A9D4BC /* ActiveRaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActiveRaceCell.m; sourceTree = "<group>"; };
+		8CE049F5171325A500A9D4BC /* AttendedRaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendedRaceCell.h; sourceTree = "<group>"; };
+		8CE049F6171325A600A9D4BC /* AttendedRaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttendedRaceCell.m; sourceTree = "<group>"; };
+		8CE049F81713264F00A9D4BC /* AttendedRaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AttendedRaceViewController.h; sourceTree = "<group>"; };
+		8CE049F91713264F00A9D4BC /* AttendedRaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AttendedRaceViewController.m; sourceTree = "<group>"; };
+		8CE049FB1713271900A9D4BC /* BrowsedRaceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowsedRaceCell.h; sourceTree = "<group>"; };
+		8CE049FC1713271900A9D4BC /* BrowsedRaceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowsedRaceCell.m; sourceTree = "<group>"; };
+		8CE04A01171328C000A9D4BC /* NewRaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewRaceViewController.h; sourceTree = "<group>"; };
+		8CE04A02171328C100A9D4BC /* NewRaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewRaceViewController.m; sourceTree = "<group>"; };
+		8CE04A0417132A7800A9D4BC /* BrowsedRaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BrowsedRaceViewController.h; sourceTree = "<group>"; };
+		8CE04A0517132A7800A9D4BC /* BrowsedRaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BrowsedRaceViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +235,26 @@
 				8C3150DE170C1D6400A39561 /* AllActiveViewController.m */,
 				8C3150E0170C1D8800A39561 /* AllOrganisedViewController.h */,
 				8C3150E1170C1D8800A39561 /* AllOrganisedViewController.m */,
+				8CE049E61713167000A9D4BC /* AllRacesViewController.h */,
+				8CE049E71713167000A9D4BC /* AllRacesViewController.m */,
+				8CE049E91713196D00A9D4BC /* OrganisedRaceCell.h */,
+				8CE049EA1713196D00A9D4BC /* OrganisedRaceCell.m */,
+				8CE049EC1713210900A9D4BC /* OrganisedRaceViewController.h */,
+				8CE049ED1713210900A9D4BC /* OrganisedRaceViewController.m */,
+				8CE049EF1713219100A9D4BC /* ActiveRaceViewController.h */,
+				8CE049F01713219100A9D4BC /* ActiveRaceViewController.m */,
+				8CE049F21713223100A9D4BC /* ActiveRaceCell.h */,
+				8CE049F31713223100A9D4BC /* ActiveRaceCell.m */,
+				8CE049F5171325A500A9D4BC /* AttendedRaceCell.h */,
+				8CE049F6171325A600A9D4BC /* AttendedRaceCell.m */,
+				8CE049F81713264F00A9D4BC /* AttendedRaceViewController.h */,
+				8CE049F91713264F00A9D4BC /* AttendedRaceViewController.m */,
+				8CE049FB1713271900A9D4BC /* BrowsedRaceCell.h */,
+				8CE049FC1713271900A9D4BC /* BrowsedRaceCell.m */,
+				8CE04A01171328C000A9D4BC /* NewRaceViewController.h */,
+				8CE04A02171328C100A9D4BC /* NewRaceViewController.m */,
+				8CE04A0417132A7800A9D4BC /* BrowsedRaceViewController.h */,
+				8CE04A0517132A7800A9D4BC /* BrowsedRaceViewController.m */,
 			);
 			path = JustRace;
 			sourceTree = "<group>";
@@ -305,6 +355,16 @@
 				8C3150DC170C1D3F00A39561 /* AllAttendedViewController.m in Sources */,
 				8C3150DF170C1D6400A39561 /* AllActiveViewController.m in Sources */,
 				8C3150E2170C1D8800A39561 /* AllOrganisedViewController.m in Sources */,
+				8CE049E81713167000A9D4BC /* AllRacesViewController.m in Sources */,
+				8CE049EB1713196D00A9D4BC /* OrganisedRaceCell.m in Sources */,
+				8CE049EE1713210900A9D4BC /* OrganisedRaceViewController.m in Sources */,
+				8CE049F11713219100A9D4BC /* ActiveRaceViewController.m in Sources */,
+				8CE049F41713223100A9D4BC /* ActiveRaceCell.m in Sources */,
+				8CE049F7171325A600A9D4BC /* AttendedRaceCell.m in Sources */,
+				8CE049FA1713264F00A9D4BC /* AttendedRaceViewController.m in Sources */,
+				8CE049FD1713271900A9D4BC /* BrowsedRaceCell.m in Sources */,
+				8CE04A03171328C100A9D4BC /* NewRaceViewController.m in Sources */,
+				8CE04A0617132A7800A9D4BC /* BrowsedRaceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

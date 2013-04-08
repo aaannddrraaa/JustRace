@@ -1,18 +1,18 @@
 //
-//  AllAttendedViewController.m
+//  AttendedRaceViewController.m
 //  JustRace
 //
-//  Created by Laborator iOS on 4/3/13.
+//  Created by Laborator iOS on 4/8/13.
 //  Copyright (c) 2013 Andra Mititelu. All rights reserved.
 //
 
-#import "AllAttendedViewController.h"
+#import "AttendedRaceViewController.h"
 
-@interface AllAttendedViewController ()
+@interface AttendedRaceViewController ()
 
 @end
 
-@implementation AllAttendedViewController
+@implementation AttendedRaceViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -46,19 +46,19 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 5;
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"attendedRace";
+    static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...

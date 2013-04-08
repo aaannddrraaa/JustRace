@@ -103,7 +103,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Bv1-cg-X8i" kind="push" id="aac-aa-KmY"/>
+                                    <segue destination="Bv1-cg-X8i" kind="push" id="MJN-TX-T5c"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rvr-RD-TXH">
@@ -118,6 +118,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="O8g-Kz-xZk" kind="push" id="Quf-oA-peg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -140,23 +143,53 @@
             </objects>
             <point key="canvasLocation" x="1839" y="-2008"/>
         </scene>
+        <!--New Race View Controller - New Race-->
+        <scene sceneID="hL4-eR-b6s">
+            <objects>
+                <viewController id="O8g-Kz-xZk" customClass="NewRaceViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hef-c6-Vje">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Race" id="kHS-UC-hNP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0VT-Da-LIr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="797" y="-2529"/>
+        </scene>
         <!--All Attended View Controller - All Attended-->
         <scene sceneID="8Jv-Kc-Ma9">
             <objects>
                 <tableViewController id="Td6-ML-3ya" customClass="AllAttendedViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="HWF-cb-nDL">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="86" sectionHeaderHeight="22" sectionFooterHeight="22" id="HWF-cb-nDL">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="7un-N2-6Vy">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="attendedRace" rowHeight="86" id="7un-N2-6Vy" customClass="AttendedRaceCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="86"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="85"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="An attended race by me" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfb-ST-fl2">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="Mfb-ST-fl2" firstAttribute="top" secondItem="7un-N2-6Vy" secondAttribute="top" constant="11" id="68Q-PJ-kwh"/>
+                                    <constraint firstItem="Mfb-ST-fl2" firstAttribute="leading" secondItem="7un-N2-6Vy" secondAttribute="leading" constant="46" id="Ied-hb-x8Y"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="attendedRaceNameLabel" destination="Mfb-ST-fl2" id="sbK-cS-SQA"/>
+                                    <segue destination="QCa-pK-35h" kind="push" id="iUo-Ki-Ihc"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -170,23 +203,56 @@
             </objects>
             <point key="canvasLocation" x="2597" y="-2907"/>
         </scene>
+        <!--Attended Race View Controller - Attended Race-->
+        <scene sceneID="Cy5-YO-pE8">
+            <objects>
+                <viewController id="QCa-pK-35h" customClass="AttendedRaceViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="doz-nT-P29">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Attended Race" id="U6G-wy-6l7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WPn-4V-bXS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3147" y="-2900"/>
+        </scene>
         <!--All Active View Controller - All Active-->
         <scene sceneID="VXt-uO-Efy">
             <objects>
                 <tableViewController id="7tk-BQ-CiO" customClass="AllActiveViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Mm1-u9-3R6">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="84" sectionHeaderHeight="22" sectionFooterHeight="22" id="Mm1-u9-3R6">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="W5T-xg-LMf">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="activeRace" rowHeight="84" id="W5T-xg-LMf" customClass="ActiveRaceCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="84"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="83"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="One of my active races" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGh-zI-ggf">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="pGh-zI-ggf" firstAttribute="leading" secondItem="W5T-xg-LMf" secondAttribute="leading" constant="43" id="FJS-ma-wHu"/>
+                                    <constraint firstItem="pGh-zI-ggf" firstAttribute="top" secondItem="W5T-xg-LMf" secondAttribute="top" constant="11" id="uV9-nT-iyK"/>
+                                </constraints>
+                                <string key="restorationIdentifier" base64-UTF8="YES">
+Aw
+</string>
+                                <connections>
+                                    <outlet property="activeRaceNameLabel" destination="pGh-zI-ggf" id="QHo-iX-ITK"/>
+                                    <segue destination="3ch-lW-Laa" kind="push" id="Usv-kz-iay"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -200,23 +266,53 @@
             </objects>
             <point key="canvasLocation" x="2605" y="-2040"/>
         </scene>
+        <!--My Races View Controller - ActiveRace-->
+        <scene sceneID="3Bu-L2-kB8">
+            <objects>
+                <viewController id="3ch-lW-Laa" customClass="MyRacesViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uBI-4j-cvA">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ActiveRace" id="BWH-V6-AhY"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ySc-Ly-JjF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3210" y="-2102"/>
+        </scene>
         <!--All Organised View Controller - All Organised-->
         <scene sceneID="4fE-HY-BjF">
             <objects>
                 <tableViewController id="Bv1-cg-X8i" customClass="AllOrganisedViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="exK-4L-UZ2">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="85" sectionHeaderHeight="22" sectionFooterHeight="22" id="exK-4L-UZ2">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="1Sq-Hv-o49">
-                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="organisedRace" rowHeight="85" id="1Sq-Hv-o49" customClass="OrganisedRaceCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="84"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="An organised race" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFT-0K-JDu">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="DFT-0K-JDu" firstAttribute="leading" secondItem="1Sq-Hv-o49" secondAttribute="leading" constant="49" id="QWO-gQ-aTh"/>
+                                    <constraint firstItem="DFT-0K-JDu" firstAttribute="top" secondItem="1Sq-Hv-o49" secondAttribute="top" constant="24" id="daA-xl-7wX"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="organisedRaceNameLabel" destination="DFT-0K-JDu" id="RGh-XS-bvH"/>
+                                    <segue destination="kew-9f-0EX" kind="push" id="ujm-AF-DVT"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -229,6 +325,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YRd-20-3GF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2645" y="-1208"/>
+        </scene>
+        <!--Organised Race View Controller - Organised Race-->
+        <scene sceneID="wTt-re-vS8">
+            <objects>
+                <viewController id="kew-9f-0EX" customClass="OrganisedRaceViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FMi-0p-AH0">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Organised Race" id="uQ8-Lm-3sg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d66-jB-jik" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3191" y="-1372"/>
         </scene>
         <!--Races View Controller - Races-->
         <scene sceneID="CG6-tZ-YnZ">
@@ -260,6 +371,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="sLc-e4-ZLn" kind="push" id="xQ1-94-FcX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -279,6 +393,66 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHV-su-4hj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1123" y="-1203"/>
+        </scene>
+        <!--All Races View Controller - All Races-->
+        <scene sceneID="IFA-aZ-lKj">
+            <objects>
+                <tableViewController id="sLc-e4-ZLn" customClass="AllRacesViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="81" sectionHeaderHeight="22" sectionFooterHeight="22" id="dBP-pL-fC1">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="browsedRace" rowHeight="81" id="NC7-Zl-b78" customClass="BrowsedRaceCell">
+                                <rect key="frame" x="0.0" y="22" width="320" height="81"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="80"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="One of the many races" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJy-EO-ESk">
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <constraints>
+                                    <constraint firstItem="zJy-EO-ESk" firstAttribute="top" secondItem="NC7-Zl-b78" secondAttribute="top" constant="20" type="default" id="Bvb-43-Us8"/>
+                                    <constraint firstItem="zJy-EO-ESk" firstAttribute="leading" secondItem="NC7-Zl-b78" secondAttribute="leading" constant="28" id="NK3-Sn-5fd"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="browsedRaceNameLabel" destination="zJy-EO-ESk" id="0xL-ma-wBi"/>
+                                    <segue destination="oEc-3j-jQa" kind="push" id="dje-gi-Gcm"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="sLc-e4-ZLn" id="QBN-tA-h1R"/>
+                            <outlet property="delegate" destination="sLc-e4-ZLn" id="TuC-Z9-hjf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="All Races" id="psU-Y2-9f8"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="REg-NA-k8R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1839" y="-922"/>
+        </scene>
+        <!--Browsed Race View Controller - Browsed Race-->
+        <scene sceneID="0zn-3o-yec">
+            <objects>
+                <viewController id="oEc-3j-jQa" customClass="BrowsedRaceViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6QA-nU-CQp">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Browsed Race" id="OOc-Mq-wdV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cW8-M6-Jgd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2290" y="-922"/>
         </scene>
         <!--Logged In View Controller - Logged In-->
         <scene sceneID="nWC-lY-b4x">
@@ -351,6 +525,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="O8g-Kz-xZk" kind="push" id="VJs-en-Qcc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -604,6 +781,12 @@
         </scene>
     </scenes>
     <classes>
+        <class className="ActiveRaceCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ActiveRaceCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="activeRaceNameLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
         <class className="AllActiveViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AllActiveViewController.h"/>
         </class>
@@ -612,6 +795,27 @@
         </class>
         <class className="AllOrganisedViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AllOrganisedViewController.h"/>
+        </class>
+        <class className="AllRacesViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AllRacesViewController.h"/>
+        </class>
+        <class className="AttendedRaceCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AttendedRaceCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="attendedRaceNameLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="AttendedRaceViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AttendedRaceViewController.h"/>
+        </class>
+        <class className="BrowsedRaceCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BrowsedRaceCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="browsedRaceNameLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="BrowsedRaceViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BrowsedRaceViewController.h"/>
         </class>
         <class className="DistanceViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DistanceViewController.h"/>
@@ -628,6 +832,18 @@
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="NewRaceViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewRaceViewController.h"/>
+        </class>
+        <class className="OrganisedRaceCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OrganisedRaceCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="organisedRaceNameLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="OrganisedRaceViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OrganisedRaceViewController.h"/>
         </class>
         <class className="RaceViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RaceViewController.h"/>
@@ -657,4 +873,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="VJs-en-Qcc"/>
+    </inferredMetricsTieBreakers>
 </document>

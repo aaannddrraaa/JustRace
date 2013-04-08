@@ -1,18 +1,18 @@
 //
-//  AllAttendedViewController.m
+//  AllRacesViewController.m
 //  JustRace
 //
-//  Created by Laborator iOS on 4/3/13.
+//  Created by Laborator iOS on 4/8/13.
 //  Copyright (c) 2013 Andra Mititelu. All rights reserved.
 //
 
-#import "AllAttendedViewController.h"
+#import "AllRacesViewController.h"
 
-@interface AllAttendedViewController ()
+@interface AllRacesViewController ()
 
 @end
 
-@implementation AllAttendedViewController
+@implementation AllRacesViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -58,7 +58,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"attendedRace";
+    static NSString *CellIdentifier = @"browsedRace";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
