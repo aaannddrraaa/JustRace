@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface NewRaceViewController : UIViewController
+@interface NewRaceViewController : UIViewController <UITextFieldDelegate>{
 
+    NSDate *raceDate;
+    UIActionSheet *dateSheet;
+    
+}
+@property (strong, nonatomic) IBOutlet UITextField *dateTextField;
+@property (strong, nonatomic) NSDate *raceDate;
+
+-(void) setRaceDate;
+-(void) dismissDateSet;
+-(void) cancelDateSet;
 @end

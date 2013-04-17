@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pyO-3E-cay">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pyO-3E-cay">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller - Initial-->
@@ -175,13 +175,101 @@
                     <view key="view" contentMode="scaleToFill" id="hef-c6-Vje">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Start point:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIB-HD-h4Z">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="End point:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fn0-eh-N5j">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Length:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8LB-6t-Nuh">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="am3-V7-20L">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Motto:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WWy-af-zRb">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EHV-Pk-HaX">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="159" id="tPD-h0-tqu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="input motto" translatesAutoresizingMaskIntoConstraints="NO" id="VaL-Pb-e2O" colorLabel="IBBuiltInLabel-Red">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="rlT-x0-bzN"/>
+                                    <constraint firstAttribute="width" constant="176" id="so5-Fv-Avz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Time:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmk-lw-7Ai">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Date:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yqi-tH-c2D">
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mId-65-QvM">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="153" id="Pt4-mR-gDY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="O8g-Kz-xZk" id="84f-Zy-jcF"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.82826721434655648" green="0.96323873158265239" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="VaL-Pb-e2O" firstAttribute="top" secondItem="WWy-af-zRb" secondAttribute="top" type="default" id="1UZ-7T-8vn"/>
+                            <constraint firstAttribute="bottom" secondItem="VaL-Pb-e2O" secondAttribute="bottom" constant="88" id="274-2M-KLs"/>
+                            <constraint firstItem="WWy-af-zRb" firstAttribute="trailing" secondItem="fn0-eh-N5j" secondAttribute="trailing" type="default" id="4FX-2c-1F7"/>
+                            <constraint firstItem="mId-65-QvM" firstAttribute="top" secondItem="hef-c6-Vje" secondAttribute="top" constant="83" id="52L-eQ-7Xc"/>
+                            <constraint firstAttribute="trailing" secondItem="VaL-Pb-e2O" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="5cT-VU-Gfc"/>
+                            <constraint firstItem="am3-V7-20L" firstAttribute="top" secondItem="hef-c6-Vje" secondAttribute="top" constant="20" symbolic="YES" type="default" id="EUd-1l-EUi"/>
+                            <constraint firstItem="EHV-Pk-HaX" firstAttribute="leading" secondItem="hef-c6-Vje" secondAttribute="leading" constant="118" id="H6e-Qp-gWl"/>
+                            <constraint firstItem="vIB-HD-h4Z" firstAttribute="leading" secondItem="hef-c6-Vje" secondAttribute="leading" constant="24" id="KYE-iz-mZu"/>
+                            <constraint firstItem="8LB-6t-Nuh" firstAttribute="trailing" secondItem="kmk-lw-7Ai" secondAttribute="trailing" type="default" id="Mt9-Ez-vnl"/>
+                            <constraint firstItem="vIB-HD-h4Z" firstAttribute="top" secondItem="hef-c6-Vje" secondAttribute="top" constant="154" id="OSq-FE-nXD"/>
+                            <constraint firstItem="EHV-Pk-HaX" firstAttribute="baseline" secondItem="am3-V7-20L" secondAttribute="baseline" type="default" id="Omh-ya-nbL"/>
+                            <constraint firstItem="Yqi-tH-c2D" firstAttribute="trailing" secondItem="am3-V7-20L" secondAttribute="trailing" type="default" id="QAX-uf-eMu"/>
+                            <constraint firstItem="fn0-eh-N5j" firstAttribute="top" secondItem="hef-c6-Vje" secondAttribute="top" constant="197" id="V2A-7r-y5I"/>
+                            <constraint firstItem="mId-65-QvM" firstAttribute="baseline" secondItem="Yqi-tH-c2D" secondAttribute="baseline" type="default" id="Ve8-ee-Cuu"/>
+                            <constraint firstItem="fn0-eh-N5j" firstAttribute="trailing" secondItem="vIB-HD-h4Z" secondAttribute="trailing" type="default" id="WMb-BM-aS2"/>
+                            <constraint firstItem="kmk-lw-7Ai" firstAttribute="top" secondItem="hef-c6-Vje" secondAttribute="top" constant="120" id="fK9-Mp-ddK"/>
+                            <constraint firstItem="Yqi-tH-c2D" firstAttribute="trailing" secondItem="vIB-HD-h4Z" secondAttribute="trailing" type="default" id="h8g-Ei-8O3"/>
+                            <constraint firstAttribute="bottom" secondItem="8LB-6t-Nuh" secondAttribute="bottom" constant="151" id="o2h-g9-fHP"/>
+                            <constraint firstItem="mId-65-QvM" firstAttribute="leading" secondItem="Yqi-tH-c2D" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="tYV-Jv-zXX"/>
+                            <constraint firstItem="8LB-6t-Nuh" firstAttribute="centerX" secondItem="am3-V7-20L" secondAttribute="centerX" type="default" id="usl-JK-cGf"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Race" id="kHS-UC-hNP"/>
+                    <connections>
+                        <outlet property="dateTextField" destination="mId-65-QvM" id="sSC-lP-ScU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0VT-Da-LIr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="797" y="-2529"/>
+            <point key="canvasLocation" x="748" y="-2591"/>
         </scene>
         <!--All Attended View Controller - All Attended-->
         <scene sceneID="8Jv-Kc-Ma9">
@@ -550,7 +638,7 @@ Aw
                                     <segue destination="O8g-Kz-xZk" kind="push" id="VJs-en-Qcc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" autoresizesSubviews="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccw-4e-PWA">
+                            <button autoresizesSubviews="NO" opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccw-4e-PWA">
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="HR2-aJ-IxU"/>
@@ -825,94 +913,6 @@ Aw
         <image name="login-button-small.png" width="151" height="43"/>
         <image name="silver-button-normal.png" width="307" height="48"/>
     </resources>
-    <classes>
-        <class className="ActiveRaceCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ActiveRaceCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="activeRaceNameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="AllActiveViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AllActiveViewController.h"/>
-        </class>
-        <class className="AllAttendedViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AllAttendedViewController.h"/>
-        </class>
-        <class className="AllOrganisedViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AllOrganisedViewController.h"/>
-        </class>
-        <class className="AllRacesViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AllRacesViewController.h"/>
-        </class>
-        <class className="AttendedRaceCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AttendedRaceCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="attendedRaceNameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="AttendedRaceViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AttendedRaceViewController.h"/>
-        </class>
-        <class className="BrowsedRaceCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BrowsedRaceCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="browsedRaceNameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="BrowsedRaceViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BrowsedRaceViewController.h"/>
-        </class>
-        <class className="DistanceViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DistanceViewController.h"/>
-        </class>
-        <class className="LoggedInViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoggedInViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="myImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="MyRacesViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyRacesViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="NewRaceViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewRaceViewController.h"/>
-        </class>
-        <class className="OrganisedRaceCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/OrganisedRaceCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="organisedRaceNameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="OrganisedRaceViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/OrganisedRaceViewController.h"/>
-        </class>
-        <class className="RaceViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RaceViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="loginButtonTouchHandler:"/>
-            </relationships>
-        </class>
-        <class className="RacesViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RacesViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="allRacesButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="myRacesButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="SpeedViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SpeedViewController.h"/>
-        </class>
-        <class className="StatisticsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StatisticsViewController.h"/>
-        </class>
-        <class className="TimeViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TimeViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
