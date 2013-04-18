@@ -202,20 +202,23 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EHV-Pk-HaX">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="159" id="tPD-h0-tqu"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="O8g-Kz-xZk" id="J40-NY-4Wd"/>
+                                </connections>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="input motto" translatesAutoresizingMaskIntoConstraints="NO" id="VaL-Pb-e2O" colorLabel="IBBuiltInLabel-Red">
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="158" id="a3l-Qc-to2"/>
                                     <constraint firstAttribute="height" constant="34" id="rlT-x0-bzN"/>
-                                    <constraint firstAttribute="width" constant="176" id="so5-Fv-Avz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="O8g-Kz-xZk" id="nQ5-hD-Tfm"/>
+                                </connections>
                             </textView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Time:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kmk-lw-7Ai">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -228,43 +231,108 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mId-65-QvM">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="153" id="Pt4-mR-gDY"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="O8g-Kz-xZk" id="84f-Zy-jcF"/>
                                 </connections>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yi6-Ef-z5H">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="k8C-EY-Qbc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="O8g-Kz-xZk" id="Xgg-MI-Nzi"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7pQ-Bt-JOA">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="O8g-Kz-xZk" id="rxe-E3-gj4"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RB8-pB-q2y">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="O8g-Kz-xZk" id="eCr-8R-wSc"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cmC-SS-ipg">
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="O8g-Kz-xZk" id="z3s-gX-MPA"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HN9-yG-ggs">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="242" id="ZLh-z4-Vhy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Create race" backgroundImage="silver-button-normal.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="createRace:" destination="O8g-Kz-xZk" eventType="touchUpInside" id="cV7-nB-zbB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.82826721434655648" green="0.96323873158265239" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="VaL-Pb-e2O" firstAttribute="top" secondItem="WWy-af-zRb" secondAttribute="top" type="default" id="1UZ-7T-8vn"/>
                             <constraint firstAttribute="bottom" secondItem="VaL-Pb-e2O" secondAttribute="bottom" constant="88" id="274-2M-KLs"/>
-                            <constraint firstItem="WWy-af-zRb" firstAttribute="trailing" secondItem="fn0-eh-N5j" secondAttribute="trailing" type="default" id="4FX-2c-1F7"/>
+                            <constraint firstAttribute="bottom" secondItem="cmC-SS-ipg" secondAttribute="bottom" constant="142" id="2OT-68-8bg"/>
+                            <constraint firstItem="mId-65-QvM" firstAttribute="trailing" secondItem="Yi6-Ef-z5H" secondAttribute="trailing" type="default" id="3ER-SO-bwS"/>
                             <constraint firstItem="mId-65-QvM" firstAttribute="top" secondItem="hef-c6-Vje" secondAttribute="top" constant="83" id="52L-eQ-7Xc"/>
-                            <constraint firstAttribute="trailing" secondItem="VaL-Pb-e2O" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="5cT-VU-Gfc"/>
+                            <constraint firstItem="RB8-pB-q2y" firstAttribute="top" secondItem="hef-c6-Vje" secondAttribute="top" constant="194" id="7oi-Ny-MJL"/>
                             <constraint firstItem="am3-V7-20L" firstAttribute="top" secondItem="hef-c6-Vje" secondAttribute="top" constant="20" symbolic="YES" type="default" id="EUd-1l-EUi"/>
-                            <constraint firstItem="EHV-Pk-HaX" firstAttribute="leading" secondItem="hef-c6-Vje" secondAttribute="leading" constant="118" id="H6e-Qp-gWl"/>
+                            <constraint firstItem="EHV-Pk-HaX" firstAttribute="trailing" secondItem="VaL-Pb-e2O" secondAttribute="trailing" type="default" id="EkN-rP-So5"/>
+                            <constraint firstItem="RB8-pB-q2y" firstAttribute="trailing" secondItem="cmC-SS-ipg" secondAttribute="trailing" type="default" id="IYz-ce-De1"/>
                             <constraint firstItem="vIB-HD-h4Z" firstAttribute="leading" secondItem="hef-c6-Vje" secondAttribute="leading" constant="24" id="KYE-iz-mZu"/>
-                            <constraint firstItem="8LB-6t-Nuh" firstAttribute="trailing" secondItem="kmk-lw-7Ai" secondAttribute="trailing" type="default" id="Mt9-Ez-vnl"/>
+                            <constraint firstItem="VaL-Pb-e2O" firstAttribute="leading" secondItem="mId-65-QvM" secondAttribute="leading" type="default" id="Ndh-1i-eAV"/>
                             <constraint firstItem="vIB-HD-h4Z" firstAttribute="top" secondItem="hef-c6-Vje" secondAttribute="top" constant="154" id="OSq-FE-nXD"/>
+                            <constraint firstItem="Yi6-Ef-z5H" firstAttribute="trailing" secondItem="7pQ-Bt-JOA" secondAttribute="trailing" type="default" id="OTu-mv-S3L"/>
                             <constraint firstItem="EHV-Pk-HaX" firstAttribute="baseline" secondItem="am3-V7-20L" secondAttribute="baseline" type="default" id="Omh-ya-nbL"/>
                             <constraint firstItem="Yqi-tH-c2D" firstAttribute="trailing" secondItem="am3-V7-20L" secondAttribute="trailing" type="default" id="QAX-uf-eMu"/>
-                            <constraint firstItem="fn0-eh-N5j" firstAttribute="top" secondItem="hef-c6-Vje" secondAttribute="top" constant="197" id="V2A-7r-y5I"/>
+                            <constraint firstItem="cmC-SS-ipg" firstAttribute="leading" secondItem="RB8-pB-q2y" secondAttribute="leading" type="default" id="Qev-Aw-Vpi"/>
+                            <constraint firstItem="RB8-pB-q2y" firstAttribute="baseline" secondItem="fn0-eh-N5j" secondAttribute="baseline" type="default" id="TRk-WG-h8o"/>
                             <constraint firstItem="mId-65-QvM" firstAttribute="baseline" secondItem="Yqi-tH-c2D" secondAttribute="baseline" type="default" id="Ve8-ee-Cuu"/>
                             <constraint firstItem="fn0-eh-N5j" firstAttribute="trailing" secondItem="vIB-HD-h4Z" secondAttribute="trailing" type="default" id="WMb-BM-aS2"/>
+                            <constraint firstItem="RB8-pB-q2y" firstAttribute="trailing" secondItem="7pQ-Bt-JOA" secondAttribute="trailing" type="default" id="YHm-eD-ep1"/>
+                            <constraint firstItem="7pQ-Bt-JOA" firstAttribute="top" secondItem="Yi6-Ef-z5H" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="bbW-AE-T1L"/>
+                            <constraint firstItem="EHV-Pk-HaX" firstAttribute="centerX" secondItem="Yi6-Ef-z5H" secondAttribute="centerX" type="default" id="cKr-Y8-Sjq"/>
+                            <constraint firstItem="7pQ-Bt-JOA" firstAttribute="leading" secondItem="Yi6-Ef-z5H" secondAttribute="leading" type="default" id="edL-dY-7lo"/>
                             <constraint firstItem="kmk-lw-7Ai" firstAttribute="top" secondItem="hef-c6-Vje" secondAttribute="top" constant="120" id="fK9-Mp-ddK"/>
                             <constraint firstItem="Yqi-tH-c2D" firstAttribute="trailing" secondItem="vIB-HD-h4Z" secondAttribute="trailing" type="default" id="h8g-Ei-8O3"/>
-                            <constraint firstAttribute="bottom" secondItem="8LB-6t-Nuh" secondAttribute="bottom" constant="151" id="o2h-g9-fHP"/>
+                            <constraint firstItem="VaL-Pb-e2O" firstAttribute="leading" secondItem="WWy-af-zRb" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="hlH-h9-bWz"/>
+                            <constraint firstItem="Yi6-Ef-z5H" firstAttribute="leading" secondItem="kmk-lw-7Ai" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="iT2-Po-jhC"/>
+                            <constraint firstItem="RB8-pB-q2y" firstAttribute="leading" secondItem="7pQ-Bt-JOA" secondAttribute="leading" type="default" id="ix4-NT-STM"/>
+                            <constraint firstItem="cmC-SS-ipg" firstAttribute="top" secondItem="8LB-6t-Nuh" secondAttribute="top" type="default" id="k7E-Ob-IKu"/>
+                            <constraint firstAttribute="bottom" secondItem="HN9-yG-ggs" secondAttribute="bottom" constant="8" id="pWO-wr-bnO"/>
+                            <constraint firstItem="Yi6-Ef-z5H" firstAttribute="top" secondItem="mId-65-QvM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="pzK-5b-u1c"/>
+                            <constraint firstItem="cmC-SS-ipg" firstAttribute="leading" secondItem="8LB-6t-Nuh" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="s3Y-MQ-KDk"/>
                             <constraint firstItem="mId-65-QvM" firstAttribute="leading" secondItem="Yqi-tH-c2D" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="tYV-Jv-zXX"/>
+                            <constraint firstItem="HN9-yG-ggs" firstAttribute="centerX" secondItem="hef-c6-Vje" secondAttribute="centerX" type="default" id="uGC-RA-x9J"/>
                             <constraint firstItem="8LB-6t-Nuh" firstAttribute="centerX" secondItem="am3-V7-20L" secondAttribute="centerX" type="default" id="usl-JK-cGf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Race" id="kHS-UC-hNP"/>
                     <connections>
                         <outlet property="dateTextField" destination="mId-65-QvM" id="sSC-lP-ScU"/>
+                        <outlet property="endPointTextField" destination="RB8-pB-q2y" id="792-mB-BTl"/>
+                        <outlet property="lengthTextField" destination="cmC-SS-ipg" id="Y5W-v7-Mhg"/>
+                        <outlet property="motto" destination="VaL-Pb-e2O" id="3Gq-Rq-6YK"/>
+                        <outlet property="raceNameTextField" destination="EHV-Pk-HaX" id="L28-Tv-peK"/>
+                        <outlet property="raceTimeTextField" destination="Yi6-Ef-z5H" id="6Mh-HM-4nf"/>
+                        <outlet property="startPointTextField" destination="7pQ-Bt-JOA" id="CxA-Ov-ZQ4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0VT-Da-LIr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -913,6 +981,104 @@ Aw
         <image name="login-button-small.png" width="151" height="43"/>
         <image name="silver-button-normal.png" width="307" height="48"/>
     </resources>
+    <classes>
+        <class className="ActiveRaceCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ActiveRaceCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="activeRaceNameLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="AllActiveViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AllActiveViewController.h"/>
+        </class>
+        <class className="AllAttendedViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AllAttendedViewController.h"/>
+        </class>
+        <class className="AllOrganisedViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AllOrganisedViewController.h"/>
+        </class>
+        <class className="AllRacesViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AllRacesViewController.h"/>
+        </class>
+        <class className="AttendedRaceCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AttendedRaceCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="attendedRaceNameLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="AttendedRaceViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AttendedRaceViewController.h"/>
+        </class>
+        <class className="BrowsedRaceCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BrowsedRaceCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="browsedRaceNameLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="BrowsedRaceViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BrowsedRaceViewController.h"/>
+        </class>
+        <class className="DistanceViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DistanceViewController.h"/>
+        </class>
+        <class className="LoggedInViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoggedInViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="myImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="MyRacesViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyRacesViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="NewRaceViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewRaceViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="createRace:"/>
+                <relationship kind="outlet" name="dateTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="endPointTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="lengthTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="motto" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="raceNameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="raceTimeTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="startPointTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+        <class className="OrganisedRaceCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OrganisedRaceCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="organisedRaceNameLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="OrganisedRaceViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OrganisedRaceViewController.h"/>
+        </class>
+        <class className="RaceViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RaceViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="loginButtonTouchHandler:"/>
+            </relationships>
+        </class>
+        <class className="RacesViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RacesViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="allRacesButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="myRacesButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="SpeedViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SpeedViewController.h"/>
+        </class>
+        <class className="StatisticsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StatisticsViewController.h"/>
+        </class>
+        <class className="TimeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TimeViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
