@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <GoogleMaps/GoogleMaps.h>
 
-@interface AttendedRaceViewController : UITableViewController
-
+@interface AttendedRaceViewController : UIViewController
+@property (nonatomic, strong) GMSMutablePath *racePath; 
 @end

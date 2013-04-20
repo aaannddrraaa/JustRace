@@ -7,12 +7,15 @@
 //
 
 #import "ActiveRaceViewController.h"
+#import "MapViewController.h"
 
 @interface ActiveRaceViewController ()
 
 @end
 
 @implementation ActiveRaceViewController
+
+@synthesize racePath;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -33,6 +36,11 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)activeRaceOpenMap:(id)sender {
+    MapViewController *map = [[MapViewController alloc] initWithReturnController:self racePath:self.racePath editable:YES];
+    [self.navigationController pushViewController:map animated:YES];
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "NewRaceViewController.h"
+#import "MapViewController.h"
 
 @interface NewRaceViewController ()
 
@@ -147,6 +148,11 @@
     }
     return NO;
     
+}
+
+- (IBAction)newRaceOpenMap:(id)sender {
+    MapViewController *map = [[MapViewController alloc] initWithReturnController:self racePath:nil editable:YES];
+    [self.navigationController pushViewController:map animated:YES];
 }
 
 -(IBAction)createRace:(id)sender{

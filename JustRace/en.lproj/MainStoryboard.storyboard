@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pyO-3E-cay">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pyO-3E-cay">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller - Initial-->
@@ -12,12 +12,12 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="nKV-gx-Tbm" kind="relationship" relationship="rootViewController" id="LD9-1I-rh6"/>
+                        <segue destination="nKV-gx-Tbm" kind="relationship" relationship="rootViewController" id="g5D-il-pMd"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yfH-Dl-9Ap" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1228" y="2"/>
+            <point key="canvasLocation" x="-1261" y="-5"/>
         </scene>
         <!--Race View Controller - Just Race-->
         <scene sceneID="1BV-Qk-ra2">
@@ -176,16 +176,6 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Start point:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIB-HD-h4Z">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="End point:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fn0-eh-N5j">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Length:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8LB-6t-Nuh">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -247,20 +237,6 @@
                                     <outlet property="delegate" destination="O8g-Kz-xZk" id="Xgg-MI-Nzi"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7pQ-Bt-JOA">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="O8g-Kz-xZk" id="rxe-E3-gj4"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RB8-pB-q2y">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="O8g-Kz-xZk" id="eCr-8R-wSc"/>
-                                </connections>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cmC-SS-ipg">
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -269,12 +245,9 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HN9-yG-ggs">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="242" id="ZLh-z4-Vhy"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Create race" backgroundImage="silver-button-normal.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
@@ -282,6 +255,23 @@
                                 </state>
                                 <connections>
                                     <action selector="createRace:" destination="O8g-Kz-xZk" eventType="touchUpInside" id="cV7-nB-zbB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJg-3e-EwX">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="242" id="4bR-A8-Laz"/>
+                                    <constraint firstAttribute="height" constant="44" id="Ve5-6y-TRI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Map" backgroundImage="silver-button-normal.png">
+                                    <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="newRaceOpenMap:" destination="O8g-Kz-xZk" eventType="touchUpInside" id="rMH-7r-cU9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -292,47 +282,38 @@
                             <constraint firstAttribute="bottom" secondItem="cmC-SS-ipg" secondAttribute="bottom" constant="142" id="2OT-68-8bg"/>
                             <constraint firstItem="mId-65-QvM" firstAttribute="trailing" secondItem="Yi6-Ef-z5H" secondAttribute="trailing" type="default" id="3ER-SO-bwS"/>
                             <constraint firstItem="mId-65-QvM" firstAttribute="top" secondItem="hef-c6-Vje" secondAttribute="top" constant="83" id="52L-eQ-7Xc"/>
-                            <constraint firstItem="RB8-pB-q2y" firstAttribute="top" secondItem="hef-c6-Vje" secondAttribute="top" constant="194" id="7oi-Ny-MJL"/>
+                            <constraint firstItem="Yi6-Ef-z5H" firstAttribute="trailing" secondItem="cmC-SS-ipg" secondAttribute="trailing" type="default" id="67H-uQ-MMX"/>
+                            <constraint firstItem="HN9-yG-ggs" firstAttribute="leading" secondItem="hJg-3e-EwX" secondAttribute="leading" type="default" id="Ap7-TL-A8s"/>
                             <constraint firstItem="am3-V7-20L" firstAttribute="top" secondItem="hef-c6-Vje" secondAttribute="top" constant="20" symbolic="YES" type="default" id="EUd-1l-EUi"/>
-                            <constraint firstItem="EHV-Pk-HaX" firstAttribute="trailing" secondItem="VaL-Pb-e2O" secondAttribute="trailing" type="default" id="EkN-rP-So5"/>
-                            <constraint firstItem="RB8-pB-q2y" firstAttribute="trailing" secondItem="cmC-SS-ipg" secondAttribute="trailing" type="default" id="IYz-ce-De1"/>
-                            <constraint firstItem="vIB-HD-h4Z" firstAttribute="leading" secondItem="hef-c6-Vje" secondAttribute="leading" constant="24" id="KYE-iz-mZu"/>
+                            <constraint firstItem="8LB-6t-Nuh" firstAttribute="leading" secondItem="hef-c6-Vje" secondAttribute="leading" constant="53" id="Fek-nP-CUv"/>
                             <constraint firstItem="VaL-Pb-e2O" firstAttribute="leading" secondItem="mId-65-QvM" secondAttribute="leading" type="default" id="Ndh-1i-eAV"/>
-                            <constraint firstItem="vIB-HD-h4Z" firstAttribute="top" secondItem="hef-c6-Vje" secondAttribute="top" constant="154" id="OSq-FE-nXD"/>
-                            <constraint firstItem="Yi6-Ef-z5H" firstAttribute="trailing" secondItem="7pQ-Bt-JOA" secondAttribute="trailing" type="default" id="OTu-mv-S3L"/>
                             <constraint firstItem="EHV-Pk-HaX" firstAttribute="baseline" secondItem="am3-V7-20L" secondAttribute="baseline" type="default" id="Omh-ya-nbL"/>
                             <constraint firstItem="Yqi-tH-c2D" firstAttribute="trailing" secondItem="am3-V7-20L" secondAttribute="trailing" type="default" id="QAX-uf-eMu"/>
-                            <constraint firstItem="cmC-SS-ipg" firstAttribute="leading" secondItem="RB8-pB-q2y" secondAttribute="leading" type="default" id="Qev-Aw-Vpi"/>
-                            <constraint firstItem="RB8-pB-q2y" firstAttribute="baseline" secondItem="fn0-eh-N5j" secondAttribute="baseline" type="default" id="TRk-WG-h8o"/>
+                            <constraint firstItem="hJg-3e-EwX" firstAttribute="top" secondItem="hef-c6-Vje" secondAttribute="top" constant="177" id="Qr7-y8-m1r"/>
+                            <constraint firstItem="hJg-3e-EwX" firstAttribute="centerX" secondItem="hef-c6-Vje" secondAttribute="centerX" type="default" id="RNQ-Yo-PAP"/>
+                            <constraint firstItem="hJg-3e-EwX" firstAttribute="trailing" secondItem="HN9-yG-ggs" secondAttribute="trailing" type="default" id="TJK-Ty-km4"/>
+                            <constraint firstItem="cmC-SS-ipg" firstAttribute="leading" secondItem="Yi6-Ef-z5H" secondAttribute="leading" type="default" id="Ufq-7y-bx7"/>
                             <constraint firstItem="mId-65-QvM" firstAttribute="baseline" secondItem="Yqi-tH-c2D" secondAttribute="baseline" type="default" id="Ve8-ee-Cuu"/>
-                            <constraint firstItem="fn0-eh-N5j" firstAttribute="trailing" secondItem="vIB-HD-h4Z" secondAttribute="trailing" type="default" id="WMb-BM-aS2"/>
-                            <constraint firstItem="RB8-pB-q2y" firstAttribute="trailing" secondItem="7pQ-Bt-JOA" secondAttribute="trailing" type="default" id="YHm-eD-ep1"/>
-                            <constraint firstItem="7pQ-Bt-JOA" firstAttribute="top" secondItem="Yi6-Ef-z5H" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="bbW-AE-T1L"/>
+                            <constraint firstItem="VaL-Pb-e2O" firstAttribute="trailing" secondItem="EHV-Pk-HaX" secondAttribute="trailing" type="default" id="bPD-95-6JJ"/>
                             <constraint firstItem="EHV-Pk-HaX" firstAttribute="centerX" secondItem="Yi6-Ef-z5H" secondAttribute="centerX" type="default" id="cKr-Y8-Sjq"/>
-                            <constraint firstItem="7pQ-Bt-JOA" firstAttribute="leading" secondItem="Yi6-Ef-z5H" secondAttribute="leading" type="default" id="edL-dY-7lo"/>
                             <constraint firstItem="kmk-lw-7Ai" firstAttribute="top" secondItem="hef-c6-Vje" secondAttribute="top" constant="120" id="fK9-Mp-ddK"/>
-                            <constraint firstItem="Yqi-tH-c2D" firstAttribute="trailing" secondItem="vIB-HD-h4Z" secondAttribute="trailing" type="default" id="h8g-Ei-8O3"/>
                             <constraint firstItem="VaL-Pb-e2O" firstAttribute="leading" secondItem="WWy-af-zRb" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="hlH-h9-bWz"/>
                             <constraint firstItem="Yi6-Ef-z5H" firstAttribute="leading" secondItem="kmk-lw-7Ai" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="iT2-Po-jhC"/>
-                            <constraint firstItem="RB8-pB-q2y" firstAttribute="leading" secondItem="7pQ-Bt-JOA" secondAttribute="leading" type="default" id="ix4-NT-STM"/>
                             <constraint firstItem="cmC-SS-ipg" firstAttribute="top" secondItem="8LB-6t-Nuh" secondAttribute="top" type="default" id="k7E-Ob-IKu"/>
                             <constraint firstAttribute="bottom" secondItem="HN9-yG-ggs" secondAttribute="bottom" constant="8" id="pWO-wr-bnO"/>
                             <constraint firstItem="Yi6-Ef-z5H" firstAttribute="top" secondItem="mId-65-QvM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="pzK-5b-u1c"/>
                             <constraint firstItem="cmC-SS-ipg" firstAttribute="leading" secondItem="8LB-6t-Nuh" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="s3Y-MQ-KDk"/>
                             <constraint firstItem="mId-65-QvM" firstAttribute="leading" secondItem="Yqi-tH-c2D" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="tYV-Jv-zXX"/>
-                            <constraint firstItem="HN9-yG-ggs" firstAttribute="centerX" secondItem="hef-c6-Vje" secondAttribute="centerX" type="default" id="uGC-RA-x9J"/>
                             <constraint firstItem="8LB-6t-Nuh" firstAttribute="centerX" secondItem="am3-V7-20L" secondAttribute="centerX" type="default" id="usl-JK-cGf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Race" id="kHS-UC-hNP"/>
                     <connections>
                         <outlet property="dateTextField" destination="mId-65-QvM" id="sSC-lP-ScU"/>
-                        <outlet property="endPointTextField" destination="RB8-pB-q2y" id="792-mB-BTl"/>
                         <outlet property="lengthTextField" destination="cmC-SS-ipg" id="Y5W-v7-Mhg"/>
                         <outlet property="motto" destination="VaL-Pb-e2O" id="3Gq-Rq-6YK"/>
                         <outlet property="raceNameTextField" destination="EHV-Pk-HaX" id="L28-Tv-peK"/>
                         <outlet property="raceTimeTextField" destination="Yi6-Ef-z5H" id="6Mh-HM-4nf"/>
-                        <outlet property="startPointTextField" destination="7pQ-Bt-JOA" id="CxA-Ov-ZQ4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0VT-Da-LIr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -391,7 +372,30 @@
                     <view key="view" contentMode="scaleToFill" id="doz-nT-P29">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TfN-t8-wI1">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="7xw-Bx-nxu"/>
+                                    <constraint firstAttribute="width" constant="242" id="unw-xt-ECw"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Map" backgroundImage="silver-button-normal.png">
+                                    <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="attendedRaceOpenMap:" destination="QCa-pK-35h" eventType="touchDown" id="V5d-ZJ-uLw"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TfN-t8-wI1" firstAttribute="centerY" secondItem="doz-nT-P29" secondAttribute="centerY" type="default" id="AHo-pc-adp"/>
+                            <constraint firstItem="TfN-t8-wI1" firstAttribute="centerX" secondItem="doz-nT-P29" secondAttribute="centerX" type="default" id="Tzj-oY-bre"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Attended Race" id="U6G-wy-6l7"/>
                 </viewController>
@@ -454,7 +458,30 @@ Aw
                     <view key="view" contentMode="scaleToFill" id="uBI-4j-cvA">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9Z-C0-04X">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="242" id="4Bd-Pk-QoL"/>
+                                    <constraint firstAttribute="height" constant="44" id="FSp-fN-Tny"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Map" backgroundImage="silver-button-normal.png">
+                                    <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="activeRaceOpenMap:" destination="ySc-Ly-JjF" eventType="touchDown" id="Pbd-3D-qTT"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Y9Z-C0-04X" firstAttribute="centerX" secondItem="uBI-4j-cvA" secondAttribute="centerX" type="default" id="13I-PB-0WZ"/>
+                            <constraint firstItem="Y9Z-C0-04X" firstAttribute="top" secondItem="uBI-4j-cvA" secondAttribute="top" constant="172" id="XWf-96-Wgb"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ActiveRace" id="BWH-V6-AhY"/>
                 </viewController>
@@ -514,7 +541,30 @@ Aw
                     <view key="view" contentMode="scaleToFill" id="FMi-0p-AH0">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFi-XH-imx">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Xur-wo-0OO"/>
+                                    <constraint firstAttribute="width" constant="242" id="zwn-gA-kys"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Map" backgroundImage="silver-button-normal.png">
+                                    <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="organizedRaceOpenMap:" destination="kew-9f-0EX" eventType="touchDown" id="WCi-7D-q5N"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aFi-XH-imx" firstAttribute="centerX" secondItem="FMi-0p-AH0" secondAttribute="centerX" type="default" id="Pr4-b8-xRE"/>
+                            <constraint firstItem="aFi-XH-imx" firstAttribute="top" secondItem="FMi-0p-AH0" secondAttribute="top" constant="171" id="kcl-XK-eF6"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Organised Race" id="uQ8-Lm-3sg"/>
                 </viewController>
@@ -634,7 +684,30 @@ Aw
                     <view key="view" contentMode="scaleToFill" id="6QA-nU-CQp">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nH4-vh-TRb">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="242" id="BhW-O7-qXx"/>
+                                    <constraint firstAttribute="height" constant="44" id="K9V-57-dVB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Map" backgroundImage="silver-button-normal.png">
+                                    <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="browsedRaceOpenMap:" destination="oEc-3j-jQa" eventType="touchDown" id="ttG-UH-JoX"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nH4-vh-TRb" firstAttribute="top" secondItem="6QA-nU-CQp" secondAttribute="top" constant="165" id="2Tx-ZB-iFN"/>
+                            <constraint firstItem="nH4-vh-TRb" firstAttribute="centerX" secondItem="6QA-nU-CQp" secondAttribute="centerX" type="default" id="Swl-Ue-dER"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Browsed Race" id="OOc-Mq-wdV"/>
                 </viewController>
@@ -1006,7 +1079,7 @@ Aw
                 <relationship kind="outlet" name="attendedRaceNameLabel" candidateClass="UILabel"/>
             </relationships>
         </class>
-        <class className="AttendedRaceViewController" superclassName="UITableViewController">
+        <class className="AttendedRaceViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AttendedRaceViewController.h"/>
         </class>
         <class className="BrowsedRaceCell" superclassName="UITableViewCell">
@@ -1017,6 +1090,9 @@ Aw
         </class>
         <class className="BrowsedRaceViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BrowsedRaceViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="browsedRaceOpenMap:"/>
+            </relationships>
         </class>
         <class className="DistanceViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/DistanceViewController.h"/>
@@ -1085,6 +1161,6 @@ Aw
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Quf-oA-peg"/>
+        <segue reference="VJs-en-Qcc"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -9,6 +9,7 @@
 #import "RaceAppDelegate.h"
 #import <Parse/Parse.h>
 #import <FacebookSDK/FacebookSDK.h>
+#import <GoogleMaps/GoogleMaps.h>
 
 @implementation RaceAppDelegate
 
@@ -19,6 +20,7 @@
     [Parse setApplicationId:@"89IKtEo8MJrWF3oy5nfAdgSpcWgjr31KiimQ0Q48"
                   clientKey:@"ZtFSnMfnfyGLU0KznbUCoIlLeZhOgQbrf4PBUNdl"];
     [PFFacebookUtils initializeFacebook];
+    [GMSServices provideAPIKey:@"AIzaSyCTtphm7zpgaealiUN1S5alkBdAYv98FDs"];
     return YES;
 }
 							

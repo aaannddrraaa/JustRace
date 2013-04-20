@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <GoogleMaps/GoogleMaps.h>
 
 @interface BrowsedRaceViewController : UIViewController
-
+@property (nonatomic, strong) GMSMutablePath *racePath;
 @end
