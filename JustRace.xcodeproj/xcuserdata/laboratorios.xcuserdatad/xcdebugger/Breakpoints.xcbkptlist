@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "JustRace/NewRaceViewController.m"
-         timestampString = "387973705.948664"
+         timestampString = "388331207.766243"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "130"
-         endingLineNumber = "130"
+         startingLineNumber = "131"
+         endingLineNumber = "131"
          landmarkName = "-dismissDateSet"
          landmarkType = "5">
       </FileBreakpoint>
@@ -34,11 +34,24 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "JustRace/NewRaceViewController.m"
-         timestampString = "387973681.803573"
+         timestampString = "388331207.766243"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "153"
-         endingLineNumber = "153"
+         startingLineNumber = "157"
+         endingLineNumber = "157"
+         landmarkName = "-newRaceOpenMap:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "Yes"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "JustRace/NewRaceViewController.m"
+         timestampString = "388331207.766243"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "165"
+         endingLineNumber = "165"
          landmarkName = "-createRace:"
          landmarkType = "5">
       </FileBreakpoint>

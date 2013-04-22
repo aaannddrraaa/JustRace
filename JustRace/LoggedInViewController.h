@@ -11,5 +11,6 @@
 @interface LoggedInViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *myImage;
+@property (strong, nonatomic) NSString *userID;
 
 @end

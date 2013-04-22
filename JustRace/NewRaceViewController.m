@@ -8,6 +8,9 @@
 
 #import "NewRaceViewController.h"
 #import "MapViewController.h"
+#import <Parse/Parse.h>
+#import <FacebookSDK/FacebookSDK.h>
+
 
 @interface NewRaceViewController ()
 
@@ -18,8 +21,6 @@
 @synthesize raceTime;
 @synthesize raceTimeTextField;
 @synthesize dateTextField;
-@synthesize startPointTextField;
-@synthesize endPointTextField;
 @synthesize lengthTextField;
 @synthesize motto;
 @synthesize raceNameTextField;
@@ -141,13 +142,16 @@
 
 -(BOOL) textFieldShouldBeginEditing:(UITextField *)textField{
     if ([textField isEqual:dateTextField]){
-    [self setRaceDate];
+        [self setRaceDate];
+        return NO;
+
     }
     if ([textField isEqual:raceTimeTextField]){
         [self setRaceTime];
+        return NO;
     }
-    return NO;
     
+    return YES;
 }
 
 - (IBAction)newRaceOpenMap:(id)sender {
@@ -156,6 +160,16 @@
 }
 
 -(IBAction)createRace:(id)sender{
-    
+    PFObject *race = [PFObject objectWithClassName:@"Race"];
+    [race setObject:raceNameTextField.text forKey:@"raceName"];
+    [race setObject:dateTextField.text forKey:@"raceDate"];
+    [race setObject:raceTimeTextField.text forKey:@"raceTime"];
+    [race setObject:[[PFUser currentUser] username]  forKey:@"username"];
+    [race save];
+}
+
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
+    [raceNameTextField resignFirstResponder];
+    return YES;
 }
 @end
