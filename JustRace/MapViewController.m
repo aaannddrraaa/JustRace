@@ -7,6 +7,7 @@
 //
 
 #import "MapViewController.h"
+#import "NewRaceViewController.h"
 #import <GoogleMaps/GoogleMaps.h>
 #import <CoreLocation/CoreLocation.h>
 
@@ -23,7 +24,6 @@
 @synthesize racePath;
 @synthesize editable;
 
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -33,13 +33,14 @@
     return self;
 }
 
--(id)initWithReturnController:(id)controller racePath:(GMSMutablePath *)path editable:(BOOL)edit
+-(id)initWithReturnController:(id)controller racePath:(NSString *)encodedPath editable:(BOOL)edit
 {
     self = [self init];
     if (self)
     {
         self.returnObject = controller;
-        self.racePath = path;
+        if(encodedPath != nil)
+            self.racePath = [GMSMutablePath pathFromEncodedPath:encodedPath];
         self.editable = edit;
     }
     return self;
@@ -77,7 +78,6 @@
     if(self.racePath)
         [self drawPath:self.racePath];
     [self.view addSubview:self.mapView];
-    
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     button.frame = CGRectMake(5, 360, self.view.frame.size.width - 10, 50);
     [button setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
@@ -150,6 +150,7 @@
 
 -(IBAction)sendPath:(id)sender
 {
+    [(NewRaceViewController*)self.returnObject sendPathData:[self.racePath encodedPath]];
     [self.navigationController popViewControllerAnimated:YES];
 }
 

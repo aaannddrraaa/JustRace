@@ -13,5 +13,5 @@
 @interface MapViewController : UIViewController <CLLocationManagerDelegate, GMSMapViewDelegate>
 @property (strong, nonatomic) GMSMapView *mapView;
 @property (strong, nonatomic) GMSMutablePath *racePath;
--(id)initWithReturnController:(id)controller racePath:(GMSMutablePath *)path editable:(BOOL)editable;
+-(id)initWithReturnController:(id)controller racePath:(NSString *)encodedPath editable:(BOOL)editable;
 @end
