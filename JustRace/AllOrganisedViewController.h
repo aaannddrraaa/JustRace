@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AllOrganisedViewController : UITableViewController
+@interface AllOrganisedViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>{
+    NSArray *organisedRaces;
+}
 
 @end

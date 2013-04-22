@@ -1034,109 +1034,12 @@ Aw
         <image name="login-button-small.png" width="151" height="43"/>
         <image name="silver-button-normal.png" width="307" height="48"/>
     </resources>
-    <classes>
-        <class className="ActiveRaceCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ActiveRaceCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="activeRaceNameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="AllActiveViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AllActiveViewController.h"/>
-        </class>
-        <class className="AllAttendedViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AllAttendedViewController.h"/>
-        </class>
-        <class className="AllOrganisedViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AllOrganisedViewController.h"/>
-        </class>
-        <class className="AllRacesViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AllRacesViewController.h"/>
-        </class>
-        <class className="AttendedRaceCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AttendedRaceCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="attendedRaceNameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="AttendedRaceViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AttendedRaceViewController.h"/>
-        </class>
-        <class className="BrowsedRaceCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BrowsedRaceCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="browsedRaceNameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="BrowsedRaceViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/BrowsedRaceViewController.h"/>
-        </class>
-        <class className="DistanceViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/DistanceViewController.h"/>
-        </class>
-        <class className="LoggedInViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoggedInViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="myImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="MyRacesViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyRacesViewController.h"/>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="NewRaceViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewRaceViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="createRace:"/>
-                <relationship kind="action" name="newRaceOpenMap:"/>
-                <relationship kind="outlet" name="dateTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="lengthTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="motto" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="raceNameTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="raceTimeTextField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="OrganisedRaceCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/OrganisedRaceCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="organisedRaceNameLabel" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="OrganisedRaceViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/OrganisedRaceViewController.h"/>
-        </class>
-        <class className="RaceViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RaceViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="loginButtonTouchHandler:"/>
-            </relationships>
-        </class>
-        <class className="RacesViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/RacesViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="allRacesButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="myRacesButton" candidateClass="UIButton"/>
-            </relationships>
-        </class>
-        <class className="SpeedViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SpeedViewController.h"/>
-        </class>
-        <class className="StatisticsViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/StatisticsViewController.h"/>
-        </class>
-        <class className="TimeViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/TimeViewController.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="VJs-en-Qcc"/>
+        <segue reference="Quf-oA-peg"/>
     </inferredMetricsTieBreakers>
 </document>

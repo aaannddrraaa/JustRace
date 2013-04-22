@@ -7,6 +7,7 @@
 //
 
 #import "AllOrganisedViewController.h"
+#import <Parse/Parse.h>
 
 @interface AllOrganisedViewController ()
 
@@ -27,11 +28,19 @@
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    __block UITableView *tableView = self.tableView;
+    PFQuery *query = [PFQuery queryWithClassName:@"Race"];
+    [query whereKey:@"username" equalTo:[[PFUser currentUser] username]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *data, NSError *error){
+        if (!error){
+            NSLog(@"nr curse = %d", data.count);
+            organisedRaces = data;
+            [tableView reloadData];
+        } else{
+            NSLog(@"eroare = %@",error);
+        }
+    }];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,14 +55,14 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 1;
+    return 5;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 5;
+    return [organisedRaces count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -61,7 +70,12 @@
     static NSString *CellIdentifier = @"organisedRace";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    if (cell == nil){
+        cell =[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    PFObject *race = (PFObject *)[organisedRaces objectAtIndex:indexPath.row];
+   // cell.textLabel.text =  ;
     
     return cell;
 }
@@ -117,5 +131,7 @@
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
 }
+
+
 
 @end
