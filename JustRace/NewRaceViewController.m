@@ -24,6 +24,8 @@
 @synthesize lengthTextField;
 @synthesize motto;
 @synthesize raceNameTextField;
+@synthesize racePath;
+@synthesize savedMapLabel;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -165,6 +167,7 @@
     [race setObject:dateTextField.text forKey:@"raceDate"];
     [race setObject:raceTimeTextField.text forKey:@"raceTime"];
     [race setObject:[[PFUser currentUser] username]  forKey:@"username"];
+    [race setObject:self.racePath forKey:@"racePath"];
     [race save];
 }
 
@@ -172,4 +175,12 @@
     [raceNameTextField resignFirstResponder];
     return YES;
 }
+
+-(void)sendPathData:(NSString*)data
+{
+    self.racePath = data;
+    //NSLog(@"%@",data);
+   // self.savedMapLabel.text = @"Race path saved!";
+}
+
 @end

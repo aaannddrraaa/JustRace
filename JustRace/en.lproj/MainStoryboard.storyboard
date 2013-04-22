@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pyO-3E-cay">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pyO-3E-cay">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller - Initial-->
@@ -176,11 +176,6 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Length:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8LB-6t-Nuh">
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="am3-V7-20L">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -207,6 +202,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mId-65-QvM">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="3yq-s4-OeV"/>
+                                    <constraint firstAttribute="width" constant="153" id="Hs8-M1-wkY"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -215,19 +214,13 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yi6-Ef-z5H">
                                 <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NZ9-mI-XDl"/>
                                     <constraint firstAttribute="width" constant="150" id="k8C-EY-Qbc"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="O8g-Kz-xZk" id="Xgg-MI-Nzi"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cmC-SS-ipg">
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="O8g-Kz-xZk" id="z3s-gX-MPA"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HN9-yG-ggs">
@@ -260,40 +253,44 @@
                                     <action selector="newRaceOpenMap:" destination="O8g-Kz-xZk" eventType="touchUpInside" id="rMH-7r-cU9"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I9j-Km-lvM">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.82826721434655648" green="0.96323873158265239" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="cmC-SS-ipg" secondAttribute="bottom" constant="142" id="2OT-68-8bg"/>
+                            <constraint firstItem="I9j-Km-lvM" firstAttribute="centerX" secondItem="hef-c6-Vje" secondAttribute="centerX" type="default" id="1SY-dd-77A"/>
                             <constraint firstItem="mId-65-QvM" firstAttribute="trailing" secondItem="Yi6-Ef-z5H" secondAttribute="trailing" type="default" id="3ER-SO-bwS"/>
-                            <constraint firstItem="mId-65-QvM" firstAttribute="top" secondItem="hef-c6-Vje" secondAttribute="top" constant="83" id="52L-eQ-7Xc"/>
-                            <constraint firstItem="Yi6-Ef-z5H" firstAttribute="trailing" secondItem="cmC-SS-ipg" secondAttribute="trailing" type="default" id="67H-uQ-MMX"/>
+                            <constraint firstItem="kmk-lw-7Ai" firstAttribute="top" secondItem="hef-c6-Vje" secondAttribute="top" constant="165" id="9fM-dm-ZIr"/>
                             <constraint firstItem="HN9-yG-ggs" firstAttribute="leading" secondItem="hJg-3e-EwX" secondAttribute="leading" type="default" id="Ap7-TL-A8s"/>
-                            <constraint firstItem="am3-V7-20L" firstAttribute="top" secondItem="hef-c6-Vje" secondAttribute="top" constant="20" symbolic="YES" type="default" id="EUd-1l-EUi"/>
-                            <constraint firstItem="8LB-6t-Nuh" firstAttribute="leading" secondItem="hef-c6-Vje" secondAttribute="leading" constant="53" id="Fek-nP-CUv"/>
-                            <constraint firstItem="EHV-Pk-HaX" firstAttribute="baseline" secondItem="am3-V7-20L" secondAttribute="baseline" type="default" id="Omh-ya-nbL"/>
+                            <constraint firstItem="Yqi-tH-c2D" firstAttribute="top" secondItem="hef-c6-Vje" secondAttribute="top" constant="116" id="FX3-um-ozZ"/>
+                            <constraint firstItem="I9j-Km-lvM" firstAttribute="centerX" secondItem="hJg-3e-EwX" secondAttribute="centerX" type="default" id="GRZ-Ma-A7N"/>
+                            <constraint firstItem="Yqi-tH-c2D" firstAttribute="baseline" secondItem="mId-65-QvM" secondAttribute="baseline" type="default" id="KBu-wD-ibh"/>
                             <constraint firstItem="Yqi-tH-c2D" firstAttribute="trailing" secondItem="am3-V7-20L" secondAttribute="trailing" type="default" id="QAX-uf-eMu"/>
-                            <constraint firstItem="hJg-3e-EwX" firstAttribute="top" secondItem="hef-c6-Vje" secondAttribute="top" constant="177" id="Qr7-y8-m1r"/>
-                            <constraint firstItem="hJg-3e-EwX" firstAttribute="centerX" secondItem="hef-c6-Vje" secondAttribute="centerX" type="default" id="RNQ-Yo-PAP"/>
+                            <constraint firstItem="Yi6-Ef-z5H" firstAttribute="top" secondItem="hef-c6-Vje" secondAttribute="top" constant="161" id="QC2-MB-tOd"/>
                             <constraint firstItem="hJg-3e-EwX" firstAttribute="trailing" secondItem="HN9-yG-ggs" secondAttribute="trailing" type="default" id="TJK-Ty-km4"/>
-                            <constraint firstItem="cmC-SS-ipg" firstAttribute="leading" secondItem="Yi6-Ef-z5H" secondAttribute="leading" type="default" id="Ufq-7y-bx7"/>
-                            <constraint firstItem="mId-65-QvM" firstAttribute="baseline" secondItem="Yqi-tH-c2D" secondAttribute="baseline" type="default" id="Ve8-ee-Cuu"/>
+                            <constraint firstAttribute="bottom" secondItem="hJg-3e-EwX" secondAttribute="bottom" constant="128" id="XKr-vs-KdQ"/>
                             <constraint firstItem="EHV-Pk-HaX" firstAttribute="centerX" secondItem="Yi6-Ef-z5H" secondAttribute="centerX" type="default" id="cKr-Y8-Sjq"/>
-                            <constraint firstItem="kmk-lw-7Ai" firstAttribute="top" secondItem="hef-c6-Vje" secondAttribute="top" constant="120" id="fK9-Mp-ddK"/>
+                            <constraint firstItem="mId-65-QvM" firstAttribute="top" secondItem="hef-c6-Vje" secondAttribute="top" constant="112" id="dgG-eM-BGW"/>
                             <constraint firstItem="Yi6-Ef-z5H" firstAttribute="leading" secondItem="kmk-lw-7Ai" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="iT2-Po-jhC"/>
-                            <constraint firstItem="cmC-SS-ipg" firstAttribute="top" secondItem="8LB-6t-Nuh" secondAttribute="top" type="default" id="k7E-Ob-IKu"/>
+                            <constraint firstAttribute="bottom" secondItem="I9j-Km-lvM" secondAttribute="bottom" constant="93" id="kbY-8h-JEP"/>
+                            <constraint firstItem="kmk-lw-7Ai" firstAttribute="baseline" secondItem="Yi6-Ef-z5H" secondAttribute="baseline" type="default" id="khz-kJ-rqx"/>
+                            <constraint firstItem="am3-V7-20L" firstAttribute="centerY" secondItem="EHV-Pk-HaX" secondAttribute="centerY" type="default" id="lcw-5y-iVk"/>
                             <constraint firstAttribute="bottom" secondItem="HN9-yG-ggs" secondAttribute="bottom" constant="8" id="pWO-wr-bnO"/>
-                            <constraint firstItem="Yi6-Ef-z5H" firstAttribute="top" secondItem="mId-65-QvM" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="pzK-5b-u1c"/>
-                            <constraint firstItem="cmC-SS-ipg" firstAttribute="leading" secondItem="8LB-6t-Nuh" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="s3Y-MQ-KDk"/>
+                            <constraint firstItem="am3-V7-20L" firstAttribute="leading" secondItem="hef-c6-Vje" secondAttribute="leading" constant="56" id="s64-oZ-gO1"/>
                             <constraint firstItem="mId-65-QvM" firstAttribute="leading" secondItem="Yqi-tH-c2D" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="tYV-Jv-zXX"/>
-                            <constraint firstItem="8LB-6t-Nuh" firstAttribute="centerX" secondItem="am3-V7-20L" secondAttribute="centerX" type="default" id="usl-JK-cGf"/>
+                            <constraint firstItem="EHV-Pk-HaX" firstAttribute="top" secondItem="hef-c6-Vje" secondAttribute="top" constant="53" id="xQS-sb-jkj"/>
+                            <constraint firstItem="am3-V7-20L" firstAttribute="baseline" secondItem="EHV-Pk-HaX" secondAttribute="baseline" type="default" id="zQ3-ml-Ueb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="New Race" id="kHS-UC-hNP"/>
                     <connections>
                         <outlet property="dateTextField" destination="mId-65-QvM" id="sSC-lP-ScU"/>
-                        <outlet property="lengthTextField" destination="cmC-SS-ipg" id="Y5W-v7-Mhg"/>
                         <outlet property="raceNameTextField" destination="EHV-Pk-HaX" id="L28-Tv-peK"/>
                         <outlet property="raceTimeTextField" destination="Yi6-Ef-z5H" id="6Mh-HM-4nf"/>
+                        <outlet property="savedMapLabel" destination="hef-c6-Vje" id="Qmw-4y-2DI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0VT-Da-LIr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1034,6 +1031,107 @@ Aw
         <image name="login-button-small.png" width="151" height="43"/>
         <image name="silver-button-normal.png" width="307" height="48"/>
     </resources>
+<<<<<<< HEAD
+=======
+    <classes>
+        <class className="ActiveRaceCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ActiveRaceCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="activeRaceNameLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="AllActiveViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AllActiveViewController.h"/>
+        </class>
+        <class className="AllAttendedViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AllAttendedViewController.h"/>
+        </class>
+        <class className="AllOrganisedViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AllOrganisedViewController.h"/>
+        </class>
+        <class className="AllRacesViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AllRacesViewController.h"/>
+        </class>
+        <class className="AttendedRaceCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AttendedRaceCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="attendedRaceNameLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="AttendedRaceViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AttendedRaceViewController.h"/>
+        </class>
+        <class className="BrowsedRaceCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BrowsedRaceCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="browsedRaceNameLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="BrowsedRaceViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BrowsedRaceViewController.h"/>
+        </class>
+        <class className="DistanceViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/DistanceViewController.h"/>
+        </class>
+        <class className="LoggedInViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoggedInViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="myImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="MyRacesViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MyRacesViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="NewRaceViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NewRaceViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="createRace:"/>
+                <relationship kind="action" name="newRaceOpenMap:"/>
+                <relationship kind="outlet" name="dateTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="lengthTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="motto" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="raceNameTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="raceTimeTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="savedMapLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="OrganisedRaceCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OrganisedRaceCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="organisedRaceNameLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="OrganisedRaceViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/OrganisedRaceViewController.h"/>
+        </class>
+        <class className="RaceViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RaceViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="loginButtonTouchHandler:"/>
+            </relationships>
+        </class>
+        <class className="RacesViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/RacesViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="allRacesButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="myRacesButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="SpeedViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SpeedViewController.h"/>
+        </class>
+        <class className="StatisticsViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/StatisticsViewController.h"/>
+        </class>
+        <class className="TimeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/TimeViewController.h"/>
+        </class>
+    </classes>
+>>>>>>> 39faebbe4d2e86088fcd91b4a86ddb7fac2a39a3
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
