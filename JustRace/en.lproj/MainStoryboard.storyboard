@@ -1031,8 +1031,6 @@ Aw
         <image name="login-button-small.png" width="151" height="43"/>
         <image name="silver-button-normal.png" width="307" height="48"/>
     </resources>
-<<<<<<< HEAD
-=======
     <classes>
         <class className="ActiveRaceCell" superclassName="UITableViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ActiveRaceCell.h"/>
@@ -1131,7 +1129,6 @@ Aw
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TimeViewController.h"/>
         </class>
     </classes>
->>>>>>> 39faebbe4d2e86088fcd91b4a86ddb7fac2a39a3
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
