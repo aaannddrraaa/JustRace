@@ -167,7 +167,7 @@
     [race setObject:dateTextField.text forKey:@"raceDate"];
     [race setObject:raceTimeTextField.text forKey:@"raceTime"];
     [race setObject:[[PFUser currentUser] username]  forKey:@"username"];
-    [race setObject:self.racePath forKey:@"racePath"];
+    //[race setObject:self.racePath forKey:@"racePath"];
     [race save];
 }
 

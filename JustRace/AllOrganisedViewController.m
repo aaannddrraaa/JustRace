@@ -55,7 +55,7 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 5;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -75,7 +75,10 @@
     }
     
     PFObject *race = (PFObject *)[organisedRaces objectAtIndex:indexPath.row];
-   // cell.textLabel.text =  ;
+    NSString *raceName = [race objectForKey:@"raceName"];
+    
+    cell.textLabel.text =  raceName;
+    
     
     return cell;
 }
