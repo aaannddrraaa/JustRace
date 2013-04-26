@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AllRacesViewController : UITableViewController
+@interface AllRacesViewController : UITableViewController<UITableViewDataSource, UITableViewDelegate>{
+    NSArray *allRaces;
+}
+
 
 
 @end

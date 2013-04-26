@@ -7,6 +7,7 @@
 //
 
 #import "AllRacesViewController.h"
+#import <Parse/Parse.h>
 
 @interface AllRacesViewController ()
 
@@ -27,11 +28,18 @@
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    __block UITableView *tableView = self.tableView;
+    PFQuery *query = [PFQuery queryWithClassName:@"Race"];
+    //[query whereKey:@"username" equalTo:[[PFUser currentUser] username]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *data, NSError *error){
+        if (!error){
+            NSLog(@"nr curse = %d", data.count);
+            allRaces = data;
+            [tableView reloadData];
+        } else{
+            NSLog(@"eroare = %@",error);
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -53,7 +61,7 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 5;
+    return [allRaces count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -61,7 +69,14 @@
     static NSString *CellIdentifier = @"browsedRace";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    if (cell == nil){
+        cell =[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
+    
+    PFObject *race = (PFObject *)[allRaces objectAtIndex:indexPath.row];
+    NSString *raceName = [race objectForKey:@"raceName"];
+    
+    cell.textLabel.text =  raceName;
     
     return cell;
 }

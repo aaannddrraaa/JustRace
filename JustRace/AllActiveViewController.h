@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AllActiveViewController : UITableViewController
+@interface AllActiveViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>{
+    NSArray *activeRaces;
+}
 
 @end
