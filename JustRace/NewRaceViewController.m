@@ -164,8 +164,8 @@
 -(IBAction)createRace:(id)sender{
     PFObject *race = [PFObject objectWithClassName:@"Race"];
     [race setObject:raceNameTextField.text forKey:@"raceName"];
-    [race setObject:dateTextField.text forKey:@"raceDate"];
-    [race setObject:raceTimeTextField.text forKey:@"raceTime"];
+    [race setObject:self.raceDate forKey:@"raceDate"];
+    [race setObject:self.raceTime forKey:@"raceTime"];
     [race setObject:[[PFUser currentUser] username]  forKey:@"username"];
     //[race setObject:self.racePath forKey:@"racePath"];
     [race save];

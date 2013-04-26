@@ -31,6 +31,8 @@
     __block UITableView *tableView = self.tableView;
     PFQuery *query = [PFQuery queryWithClassName:@"Race"];
     [query whereKey:@"username" equalTo:[[PFUser currentUser] username]];
+    [query whereKey:@"raceDate" greaterThan:[NSDate date]];
+    //attended = cursele din trecut
     [query findObjectsInBackgroundWithBlock:^(NSArray *data, NSError *error){
         if (!error){
             NSLog(@"nr curse = %d", data.count);
