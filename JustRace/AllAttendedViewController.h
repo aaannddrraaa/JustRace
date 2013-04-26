@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AllAttendedViewController : UITableViewController
+@interface AllAttendedViewController : UITableViewController<UITableViewDataSource, UITableViewDelegate>{
+    NSArray *attendedRaces;
+}
+
 
 @end
