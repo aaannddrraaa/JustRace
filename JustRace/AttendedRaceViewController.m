@@ -8,6 +8,7 @@
 
 #import "AttendedRaceViewController.h"
 #import "MapViewController.h"
+#import <Parse/Parse.h>
 
 @interface AttendedRaceViewController ()
 
@@ -15,7 +16,7 @@
 
 @implementation AttendedRaceViewController
 
-@synthesize racePath;
+@synthesize race;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,7 +30,30 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.nameLabel.text = [race objectForKey:@"raceName"];
 
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd MM yyyy"];
+    self.dateLabel.text = [formatter stringFromDate:[race objectForKey:@"raceDate"]];
+    
+    [formatter setDateFormat:@"hh:mm"];
+    self.timeLabel.text = [formatter stringFromDate:[race objectForKey:@"raceTime"]];
+
+    //NSLog(@"%@",[race objectForKey:@"username"]);
+    PFQuery *query = [PFUser query];
+    [query whereKey:@"username" equalTo:[race objectForKey:@"username"]];
+    
+    [query findObjectsInBackgroundWithBlock:^(NSArray *data, NSError *error){
+        if (!error){
+            NSLog(@"%@",data);
+            self.organizerLabel.text = [[data objectAtIndex:0] objectForKey:@"name"];
+        } else{
+            NSLog(@"eroare = %@",error);
+        }
+    }];
+    
+   
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -45,7 +69,7 @@
 
 
 - (IBAction)attendedRaceOpenMap:(id)sender {
-    MapViewController *map = [[MapViewController alloc] initWithReturnController:self racePath:self.racePath editable:NO];
+    MapViewController *map = [[MapViewController alloc] initWithReturnController:self racePath:[race objectForKey:@"racePath"] editable:NO];
     [self.navigationController pushViewController:map animated:YES];
 }
 

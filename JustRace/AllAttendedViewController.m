@@ -7,6 +7,7 @@
 //
 
 #import "AllAttendedViewController.h"
+#import "AttendedRaceViewController.h"
 #import <Parse/Parse.h>
 
 @interface AllAttendedViewController ()
@@ -29,14 +30,18 @@
     [super viewDidLoad];
 
     __block UITableView *tableView = self.tableView;
-    PFQuery *query = [PFQuery queryWithClassName:@"Race"];
-    [query whereKey:@"raceDate" lessThan:[NSDate date]];
-    //attended = cursele din trecut
-    [query whereKey:@"username" equalTo:[[PFUser currentUser] username]];
     
-    [query findObjectsInBackgroundWithBlock:^(NSArray *data, NSError *error){
+    //attended = curse la care a participat dar care nu sunt neaparat organizate de el
+    PFQuery *partQuery = [PFQuery queryWithClassName:@"Participation"];
+    [partQuery whereKey:@"username" equalTo:[[PFUser currentUser] username]];
+    
+    PFQuery *raceQuery = [PFQuery queryWithClassName:@"Race"];
+    [raceQuery whereKey:@"raceDate" lessThan:[NSDate date]];
+    [raceQuery whereKey:@"raceName" matchesKey:@"raceName" inQuery:partQuery];
+    
+    [raceQuery findObjectsInBackgroundWithBlock:^(NSArray *data, NSError *error){
         if (!error){
-            NSLog(@"nr curse = %d", data.count);
+            //NSLog(@"nr curse = %d", data.count);
             attendedRaces = data;
             [tableView reloadData];
         } else{
@@ -124,16 +129,20 @@
 */
 
 #pragma mark - Table view delegate
-
+/*
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    
+    
+    
 }
+*/
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    NSDictionary *race = [attendedRaces objectAtIndex:path.row];
+    [segue.destinationViewController setRace:race];
+}
 @end

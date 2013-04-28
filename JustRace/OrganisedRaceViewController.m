@@ -15,7 +15,7 @@
 
 @implementation OrganisedRaceViewController
 
-@synthesize racePath;
+@synthesize race;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,6 +29,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.nameLabel.text = [race objectForKey:@"raceName"];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd MM yyyy"];
+    self.dateLabel.text = [formatter stringFromDate:[race objectForKey:@"raceDate"]];
+    
+    [formatter setDateFormat:@"hh:mm"];
+    self.timeLabel.text = [formatter stringFromDate:[race objectForKey:@"raceTime"]];
+    
+    if([(NSDate *)[race objectForKey:@"raceDate"] earlierDate:[NSDate date]])
+    {
+        [self.buttonC setTitle:@"Participants" forState:UIControlStateNormal];
+    }
+    else
+    {
+        [self.buttonC setTitle:@"Results" forState:UIControlStateNormal];
+    }
 	// Do any additional setup after loading the view.
 }
 
@@ -39,7 +57,7 @@
 }
 
 - (IBAction)organizedRaceOpenMap:(id)sender {
-    MapViewController *map = [[MapViewController alloc] initWithReturnController:self racePath:self.racePath editable:NO];
+    MapViewController *map = [[MapViewController alloc] initWithReturnController:self racePath:[race objectForKey:@"racePath"] editable:NO];
     [self.navigationController pushViewController:map animated:YES];
 }
 

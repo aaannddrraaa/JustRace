@@ -40,8 +40,9 @@
     {
         self.returnObject = controller;
         if(encodedPath != nil)
-            self.racePath = [GMSMutablePath pathFromEncodedPath:encodedPath];
+            self.racePath = [[GMSPath pathFromEncodedPath:encodedPath] mutableCopy];
         self.editable = edit;
+        NSLog(@"init %@",encodedPath);
     }
     return self;
 }
@@ -98,6 +99,7 @@
 
 -(void)drawPath:(GMSMutablePath*)path
 {
+    NSLog(@"%d",[path count]);
     GMSMarker *startMarker = [[GMSMarker alloc] init];
     startMarker.position = [path coordinateAtIndex:0];
     startMarker.title = @"START";

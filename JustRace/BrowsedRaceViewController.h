@@ -10,5 +10,10 @@
 #import <GoogleMaps/GoogleMaps.h>
 
 @interface BrowsedRaceViewController : UIViewController
-@property (nonatomic, strong) GMSMutablePath *racePath;
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *timeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *organizerLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UIButton *buttonC;
+@property (nonatomic, strong) NSDictionary *race;
 @end

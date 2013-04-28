@@ -167,8 +167,9 @@
     [race setObject:self.raceDate forKey:@"raceDate"];
     [race setObject:self.raceTime forKey:@"raceTime"];
     [race setObject:[[PFUser currentUser] username]  forKey:@"username"];
-    //[race setObject:self.racePath forKey:@"racePath"];
+    [race setObject:self.racePath forKey:@"racePath"];
     [race save];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 -(BOOL) textFieldShouldReturn:(UITextField *)textField{

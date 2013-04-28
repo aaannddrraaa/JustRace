@@ -7,6 +7,7 @@
 //
 
 #import "AllRacesViewController.h"
+#import "BrowsedRaceViewController.h"
 #import <Parse/Parse.h>
 
 @interface AllRacesViewController ()
@@ -131,6 +132,13 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    NSDictionary *race = [allRaces objectAtIndex:path.row];
+    [segue.destinationViewController setRace:race];
 }
 
 @end

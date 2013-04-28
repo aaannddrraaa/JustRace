@@ -7,6 +7,7 @@
 //
 
 #import "AllOrganisedViewController.h"
+#import "OrganisedRaceViewController.h"
 #import <Parse/Parse.h>
 
 @interface AllOrganisedViewController ()
@@ -135,6 +136,11 @@
      */
 }
 
-
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    NSDictionary *race = [organisedRaces objectAtIndex:path.row];
+    [segue.destinationViewController setRace:race];
+}
 
 @end

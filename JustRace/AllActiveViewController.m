@@ -7,6 +7,7 @@
 //
 
 #import "AllActiveViewController.h"
+#import "ActiveRaceViewController.h"
 #import <Parse/Parse.h>
 
 @interface AllActiveViewController ()
@@ -29,11 +30,16 @@
     [super viewDidLoad];
     
     __block UITableView *tableView = self.tableView;
-    PFQuery *query = [PFQuery queryWithClassName:@"Race"];
-    [query whereKey:@"username" equalTo:[[PFUser currentUser] username]];
-    [query whereKey:@"raceDate" greaterThan:[NSDate date]];
-    //attended = cursele din trecut
-    [query findObjectsInBackgroundWithBlock:^(NSArray *data, NSError *error){
+    
+    //active = curse la care va participa, nu neaparat organizate de el
+    PFQuery *partQuery = [PFQuery queryWithClassName:@"Participation"];
+    [partQuery whereKey:@"username" equalTo:[[PFUser currentUser] username]];
+    
+    PFQuery *raceQuery = [PFQuery queryWithClassName:@"Race"];
+    [raceQuery whereKey:@"raceDate" greaterThan:[NSDate date]];
+    [raceQuery whereKey:@"raceName" matchesKey:@"raceName" inQuery:partQuery];
+    
+    [raceQuery findObjectsInBackgroundWithBlock:^(NSArray *data, NSError *error){
         if (!error){
             NSLog(@"nr curse = %d", data.count);
             activeRaces = data;
@@ -135,6 +141,13 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSIndexPath *path = [self.tableView indexPathForSelectedRow];
+    NSDictionary *race = [activeRaces objectAtIndex:path.row];
+    [segue.destinationViewController setRace:race];
 }
 
 @end
