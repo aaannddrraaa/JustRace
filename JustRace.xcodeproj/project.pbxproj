@@ -79,6 +79,7 @@
 		19CC97141707281500D70DF0 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19CC97131707281500D70DF0 /* AdSupport.framework */; };
 		19CC9716170728BF00D70DF0 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 19CC9715170728BF00D70DF0 /* FacebookSDKResources.bundle */; };
 		19CC9718170728CA00D70DF0 /* FBUserSettingsViewResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 19CC9717170728CA00D70DF0 /* FBUserSettingsViewResources.bundle */; };
+		8C0F86EA172EC7B2008B9656 /* login-button-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C0F86E9172EC7B1008B9656 /* login-button-small.png */; };
 		8C3150CA170C17C300A39561 /* RacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3150C9170C17C300A39561 /* RacesViewController.m */; };
 		8C3150CD170C1B6600A39561 /* MyRacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3150CC170C1B6600A39561 /* MyRacesViewController.m */; };
 		8C3150D0170C1BC200A39561 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3150CF170C1BC200A39561 /* StatisticsViewController.m */; };
@@ -181,6 +182,7 @@
 		19CC97131707281500D70DF0 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		19CC9715170728BF00D70DF0 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
 		19CC9717170728CA00D70DF0 /* FBUserSettingsViewResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBUserSettingsViewResources.bundle; sourceTree = "<group>"; };
+		8C0F86E9172EC7B1008B9656 /* login-button-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login-button-small.png"; path = "FacebookSDKResources.bundle/FBLoginView/images/login-button-small.png"; sourceTree = "<group>"; };
 		8C3150C8170C17C300A39561 /* RacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RacesViewController.h; sourceTree = "<group>"; };
 		8C3150C9170C17C300A39561 /* RacesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RacesViewController.m; sourceTree = "<group>"; };
 		8C3150CB170C1B6600A39561 /* MyRacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRacesViewController.h; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 		19CC96BD17071E7000D70DF0 = {
 			isa = PBXGroup;
 			children = (
+				8C0F86E9172EC7B1008B9656 /* login-button-small.png */,
 				19CC96D217071E7000D70DF0 /* JustRace */,
 				19CC96CB17071E7000D70DF0 /* Frameworks */,
 				19CC96C917071E7000D70DF0 /* Products */,
@@ -515,6 +518,7 @@
 				19075BF0171749BE0043CC0D /* whiteButton.png in Resources */,
 				19075BF1171749BE0043CC0D /* whiteButton@2x.png in Resources */,
 				19075BF2171749BE0043CC0D /* whiteButtonHighlight.png in Resources */,
+				8C0F86EA172EC7B2008B9656 /* login-button-small.png in Resources */,
 				19075BF3171749BE0043CC0D /* whiteButtonHighlight@2x.png in Resources */,
 				19075BF5171751E00043CC0D /* silver-button-normal.png in Resources */,
 				19075BF91722A0990043CC0D /* GoogleMaps.bundle in Resources */,

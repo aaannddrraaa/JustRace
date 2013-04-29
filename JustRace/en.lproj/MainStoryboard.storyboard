@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pyO-3E-cay">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pyO-3E-cay">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller - Initial-->
@@ -312,21 +312,9 @@
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="85"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="An attended race by me" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mfb-ST-fl2">
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </label>
-                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <constraints>
-                                    <constraint firstItem="Mfb-ST-fl2" firstAttribute="top" secondItem="7un-N2-6Vy" secondAttribute="top" constant="11" id="68Q-PJ-kwh"/>
-                                    <constraint firstItem="Mfb-ST-fl2" firstAttribute="leading" secondItem="7un-N2-6Vy" secondAttribute="leading" constant="46" id="Ied-hb-x8Y"/>
-                                </constraints>
                                 <connections>
-                                    <outlet property="attendedRaceNameLabel" destination="Mfb-ST-fl2" id="sbK-cS-SQA"/>
                                     <segue destination="QCa-pK-35h" kind="push" id="iUo-Ki-Ihc"/>
                                 </connections>
                             </tableViewCell>
@@ -490,7 +478,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="83"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="One of my active races" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGh-zI-ggf">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGh-zI-ggf">
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -656,21 +644,9 @@ Aw
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="84"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="An organised race" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DFT-0K-JDu">
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </label>
-                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <constraints>
-                                    <constraint firstItem="DFT-0K-JDu" firstAttribute="leading" secondItem="1Sq-Hv-o49" secondAttribute="leading" constant="49" id="QWO-gQ-aTh"/>
-                                    <constraint firstItem="DFT-0K-JDu" firstAttribute="top" secondItem="1Sq-Hv-o49" secondAttribute="top" constant="24" id="daA-xl-7wX"/>
-                                </constraints>
                                 <connections>
-                                    <outlet property="organisedRaceNameLabel" destination="DFT-0K-JDu" id="RGh-XS-bvH"/>
                                     <segue destination="kew-9f-0EX" kind="push" id="ujm-AF-DVT"/>
                                 </connections>
                             </tableViewCell>
@@ -778,7 +754,7 @@ Aw
                     </view>
                     <navigationItem key="navigationItem" title="Organised Race" id="uQ8-Lm-3sg"/>
                     <connections>
-                        <outlet property="button" destination="Do6-IM-TBP" id="13b-CO-DEB"/>
+                        <outlet property="buttonC" destination="Do6-IM-TBP" id="X9h-Wd-Nnj"/>
                         <outlet property="dateLabel" destination="3y6-ob-RW4" id="hkk-Wl-pA8"/>
                         <outlet property="nameLabel" destination="aSl-up-Fkn" id="G3i-Hi-yaJ"/>
                         <outlet property="timeLabel" destination="o7Y-G4-3Wt" id="Ihb-CD-b4H"/>
@@ -864,21 +840,9 @@ Aw
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="300" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="One of the many races" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zJy-EO-ESk">
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <color key="highlightedColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </label>
-                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <constraints>
-                                    <constraint firstItem="zJy-EO-ESk" firstAttribute="top" secondItem="NC7-Zl-b78" secondAttribute="top" constant="20" type="default" id="Bvb-43-Us8"/>
-                                    <constraint firstItem="zJy-EO-ESk" firstAttribute="leading" secondItem="NC7-Zl-b78" secondAttribute="leading" constant="28" id="NK3-Sn-5fd"/>
-                                </constraints>
                                 <connections>
-                                    <outlet property="browsedRaceNameLabel" destination="zJy-EO-ESk" id="0xL-ma-wBi"/>
                                     <segue destination="oEc-3j-jQa" kind="push" id="dje-gi-Gcm"/>
                                 </connections>
                             </tableViewCell>
@@ -1393,6 +1357,7 @@ Aw
         <class className="AttendedRaceViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AttendedRaceViewController.h"/>
             <relationships>
+                <relationship kind="action" name="attendedRaceOpenMap:"/>
                 <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="organizerLabel" candidateClass="UILabel"/>
@@ -1408,6 +1373,8 @@ Aw
         <class className="BrowsedRaceViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/BrowsedRaceViewController.h"/>
             <relationships>
+                <relationship kind="action" name="browsedRaceOpenMap:"/>
+                <relationship kind="action" name="joinRace:"/>
                 <relationship kind="outlet" name="buttonC" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
@@ -1458,6 +1425,7 @@ Aw
         <class className="OrganisedRaceViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/OrganisedRaceViewController.h"/>
             <relationships>
+                <relationship kind="action" name="organizedRaceOpenMap:"/>
                 <relationship kind="outlet" name="buttonC" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="nameLabel" candidateClass="UILabel"/>
@@ -1466,6 +1434,9 @@ Aw
         </class>
         <class className="RaceViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RaceViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="loginButtonTouchHandler:"/>
+            </relationships>
         </class>
         <class className="RacesViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RacesViewController.h"/>

@@ -8,6 +8,7 @@
 
 #import "OrganisedRaceViewController.h"
 #import "MapViewController.h"
+#import <Parse/Parse.h>
 
 @interface OrganisedRaceViewController ()
 
