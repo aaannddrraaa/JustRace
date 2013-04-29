@@ -80,6 +80,8 @@
 		19CC9716170728BF00D70DF0 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 19CC9715170728BF00D70DF0 /* FacebookSDKResources.bundle */; };
 		19CC9718170728CA00D70DF0 /* FBUserSettingsViewResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 19CC9717170728CA00D70DF0 /* FBUserSettingsViewResources.bundle */; };
 		8C0F86EA172EC7B2008B9656 /* login-button-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C0F86E9172EC7B1008B9656 /* login-button-small.png */; };
+		8C0F86F3172EDA51008B9656 /* ParticipantsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C0F86F2172EDA51008B9656 /* ParticipantsListViewController.m */; };
+		8C0F86F6172EDAC6008B9656 /* ParticipantCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C0F86F5172EDAC5008B9656 /* ParticipantCell.m */; };
 		8C3150CA170C17C300A39561 /* RacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3150C9170C17C300A39561 /* RacesViewController.m */; };
 		8C3150CD170C1B6600A39561 /* MyRacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3150CC170C1B6600A39561 /* MyRacesViewController.m */; };
 		8C3150D0170C1BC200A39561 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3150CF170C1BC200A39561 /* StatisticsViewController.m */; };
@@ -183,6 +185,10 @@
 		19CC9715170728BF00D70DF0 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
 		19CC9717170728CA00D70DF0 /* FBUserSettingsViewResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBUserSettingsViewResources.bundle; sourceTree = "<group>"; };
 		8C0F86E9172EC7B1008B9656 /* login-button-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "login-button-small.png"; path = "FacebookSDKResources.bundle/FBLoginView/images/login-button-small.png"; sourceTree = "<group>"; };
+		8C0F86F1172EDA50008B9656 /* ParticipantsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticipantsListViewController.h; sourceTree = "<group>"; };
+		8C0F86F2172EDA51008B9656 /* ParticipantsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParticipantsListViewController.m; sourceTree = "<group>"; };
+		8C0F86F4172EDAC5008B9656 /* ParticipantCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticipantCell.h; sourceTree = "<group>"; };
+		8C0F86F5172EDAC5008B9656 /* ParticipantCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParticipantCell.m; sourceTree = "<group>"; };
 		8C3150C8170C17C300A39561 /* RacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RacesViewController.h; sourceTree = "<group>"; };
 		8C3150C9170C17C300A39561 /* RacesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RacesViewController.m; sourceTree = "<group>"; };
 		8C3150CB170C1B6600A39561 /* MyRacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRacesViewController.h; sourceTree = "<group>"; };
@@ -409,6 +415,10 @@
 				19075C111722A36F0043CC0D /* MapViewController.m */,
 				8C79C2C61725708C00013FAB /* GlobalVariables.h */,
 				8C79C2C71725708C00013FAB /* GlobalVariables.m */,
+				8C0F86F1172EDA50008B9656 /* ParticipantsListViewController.h */,
+				8C0F86F2172EDA51008B9656 /* ParticipantsListViewController.m */,
+				8C0F86F4172EDAC5008B9656 /* ParticipantCell.h */,
+				8C0F86F5172EDAC5008B9656 /* ParticipantCell.m */,
 			);
 			path = JustRace;
 			sourceTree = "<group>";
@@ -557,6 +567,8 @@
 				8CE04A0617132A7800A9D4BC /* BrowsedRaceViewController.m in Sources */,
 				19075C121722A3700043CC0D /* MapViewController.m in Sources */,
 				8C79C2C81725708C00013FAB /* GlobalVariables.m in Sources */,
+				8C0F86F3172EDA51008B9656 /* ParticipantsListViewController.m in Sources */,
+				8C0F86F6172EDAC6008B9656 /* ParticipantCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
