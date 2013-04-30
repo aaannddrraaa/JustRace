@@ -33,12 +33,12 @@
     __block UITableView *tableView = self.tableView;
 
     
-    PFQuery *query = [PFQuery queryWithClassName:@"Participation"];
-    [query whereKey:@"raceName" equalTo:[race objectForKey:@"raceName"]];
-    
+    PFQuery *firstQuery = [PFQuery queryWithClassName:@"Participation"];
+    [firstQuery whereKey:@"raceName" equalTo:[race objectForKey:@"raceName"]];
+    //query ia toate username-urile pt cursa respectiva => eu vreau NUMELE, nu username-ul
     
         
-    [query findObjectsInBackgroundWithBlock:^(NSArray *data, NSError *error){
+    /*[query findObjectsInBackgroundWithBlock:^(NSArray *data, NSError *error){
         if (!error){
             participantsList = data;
             NSLog(@"nr participanti = %d", participantsList.count);
@@ -46,17 +46,17 @@
         }else{
             NSLog(@"eroare");
         }
-    }];
+    }];*/
     
-    PFQuery *secondQuery = [PFQuery queryWithClassName:@"User"];
-    [secondQuery whereKey:@"username" matchesKey:@"username" inQuery:query];
+    PFQuery *secondQuery = [PFUser query];
+    [secondQuery whereKey:@"username" matchesKey:@"username" inQuery:firstQuery];
     
-    __block NSArray *usernames;
+   // __block NSArray *usernames;
     [secondQuery findObjectsInBackgroundWithBlock:^(NSArray *data, NSError *error){
         if (!error){
-            usernames = data;
-            NSLog(@"nr participanti cu numele ala= %d", usernames.count);
-            NSLog(@"primul username=%@", (NSString*)[[participantsList objectAtIndex:0]objectForKey:@"username"]);
+            participantsList = data;
+            //NSLog(@"nr participanti cu numele ala= %d", participantsList.count);
+            //NSLog(@"primul username=%@", (NSString*)[[participantsList objectAtIndex:0]objectForKey:@"username"]);
             [tableView reloadData];
         }else{
             NSLog(@"eroare");
@@ -97,10 +97,13 @@
         cell =[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
 
-    PFObject *participant = (PFObject*)[participantsList objectAtIndex:indexPath.row];
+    if (participantsList.count > 0)
+    {
+        PFObject *participant = (PFObject*)[participantsList objectAtIndex:indexPath.row];
         
-    cell.textLabel.text = [participant objectForKey:@"username"];
-       
+        cell.textLabel.text = [participant objectForKey:@"name"];
+    }
+    
     return cell;
 }
 

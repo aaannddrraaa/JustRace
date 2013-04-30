@@ -62,4 +62,8 @@
     [self.navigationController pushViewController:map animated:YES];
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    [segue.destinationViewController setRace:race];
+}
+
 @end

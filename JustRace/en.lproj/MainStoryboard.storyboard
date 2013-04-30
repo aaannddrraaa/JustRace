@@ -660,7 +660,7 @@ Aw
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zjv-kT-3bd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3862" y="-2080"/>
+            <point key="canvasLocation" x="4192" y="-1888"/>
         </scene>
         <!--All Organised View Controller - All Organised-->
         <scene sceneID="4fE-HY-BjF">
@@ -693,7 +693,7 @@ Aw
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YRd-20-3GF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2645" y="-1208"/>
+            <point key="canvasLocation" x="2617" y="-1436"/>
         </scene>
         <!--Organised Race View Controller - Organised Race-->
         <scene sceneID="wTt-re-vS8">
@@ -763,6 +763,9 @@ Aw
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="pI1-rO-bh9" kind="push" id="B7a-Nc-2PS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -796,7 +799,7 @@ Aw
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d66-jB-jik" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3191" y="-1372"/>
+            <point key="canvasLocation" x="3147" y="-1448"/>
         </scene>
         <!--Races View Controller - Races-->
         <scene sceneID="CG6-tZ-YnZ">
@@ -928,6 +931,9 @@ Aw
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="pI1-rO-bh9" kind="push" id="Huy-Kk-hto"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vjX-Si-xkw">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -1360,5 +1366,6 @@ Aw
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="Quf-oA-peg"/>
+        <segue reference="Huy-Kk-hto"/>
     </inferredMetricsTieBreakers>
 </document>
