@@ -93,6 +93,8 @@
     static NSString *CellIdentifier = @"participant";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
+    NSString *facebookID;
+    
     if (cell == nil){
         cell =[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
@@ -102,7 +104,16 @@
         PFObject *participant = (PFObject*)[participantsList objectAtIndex:indexPath.row];
         
         cell.textLabel.text = [participant objectForKey:@"name"];
+        facebookID = [participant objectForKey:@"facebookID"];
+        NSURL *pictureURL = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large&return_ssl_resources=1", facebookID]];
+        
+        NSMutableURLRequest *urlRequest = [NSMutableURLRequest requestWithURL:pictureURL
+                                                                  cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:2.0f];
+        NSData *data = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:nil error:nil];
+        UIImage *img = [[UIImage alloc] initWithData:data];
+        cell.imageView.image = img;
     }
+    
     
     return cell;
 }

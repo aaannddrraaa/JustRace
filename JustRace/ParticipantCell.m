@@ -10,6 +10,9 @@
 
 @implementation ParticipantCell
 
+@synthesize nameLabel;
+@synthesize userPhoto;
+
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];

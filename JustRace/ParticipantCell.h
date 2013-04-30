@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ParticipantCell : UITableViewCell
+@interface ParticipantCell : UITableViewCell{
+    UILabel *nameLabel;
+    UIImageView *userPhoto;
+    
+}
+@property (strong, nonatomic) IBOutlet UILabel *nameLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *userPhoto;
 
 @end

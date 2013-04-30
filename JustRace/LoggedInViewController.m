@@ -53,6 +53,7 @@
             if(![[PFUser currentUser] objectForKey:@"name"])
             {
                 [[PFUser currentUser] setObject:userData[@"name"] forKey:@"name"];
+                [[PFUser currentUser] setObject:userData[@"id"] forKey:@"facebookID"];
                 [[PFUser currentUser] saveInBackground];
             }
             
