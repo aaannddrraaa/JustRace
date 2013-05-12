@@ -50,6 +50,10 @@
 		19075C091722A14F0043CC0D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 19075C081722A14F0043CC0D /* libz.dylib */; };
 		19075C0B1722A15C0043CC0D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19075C0A1722A15C0043CC0D /* OpenGLES.framework */; };
 		19075C121722A3700043CC0D /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19075C111722A36F0043CC0D /* MapViewController.m */; };
+		19075C1E173FDC390043CC0D /* LiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19075C1C173FDC380043CC0D /* LiveViewController.m */; };
+		19075C1F173FDC390043CC0D /* LiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19075C1D173FDC390043CC0D /* LiveViewController.xib */; };
+		19075C24173FF4B80043CC0D /* InRaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19075C22173FF4B70043CC0D /* InRaceViewController.m */; };
+		19075C25173FF4B80043CC0D /* InRaceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19075C23173FF4B70043CC0D /* InRaceViewController.xib */; };
 		19CC96CD17071E7000D70DF0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19CC96CC17071E7000D70DF0 /* UIKit.framework */; };
 		19CC96CF17071E7000D70DF0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19CC96CE17071E7000D70DF0 /* Foundation.framework */; };
 		19CC96D117071E7000D70DF0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19CC96D017071E7000D70DF0 /* CoreGraphics.framework */; };
@@ -149,6 +153,12 @@
 		19075C0A1722A15C0043CC0D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		19075C101722A36F0043CC0D /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		19075C111722A36F0043CC0D /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		19075C1B173FDC380043CC0D /* LiveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LiveViewController.h; path = ../LiveViewController.h; sourceTree = "<group>"; };
+		19075C1C173FDC380043CC0D /* LiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LiveViewController.m; path = ../LiveViewController.m; sourceTree = "<group>"; };
+		19075C1D173FDC390043CC0D /* LiveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LiveViewController.xib; path = ../LiveViewController.xib; sourceTree = "<group>"; };
+		19075C21173FF4B60043CC0D /* InRaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InRaceViewController.h; sourceTree = "<group>"; };
+		19075C22173FF4B70043CC0D /* InRaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InRaceViewController.m; sourceTree = "<group>"; };
+		19075C23173FF4B70043CC0D /* InRaceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InRaceViewController.xib; sourceTree = "<group>"; };
 		19CC96C817071E7000D70DF0 /* JustRace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustRace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19CC96CC17071E7000D70DF0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		19CC96CE17071E7000D70DF0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -365,6 +375,9 @@
 		19CC96D217071E7000D70DF0 /* JustRace */ = {
 			isa = PBXGroup;
 			children = (
+				19075C1B173FDC380043CC0D /* LiveViewController.h */,
+				19075C1C173FDC380043CC0D /* LiveViewController.m */,
+				19075C1D173FDC390043CC0D /* LiveViewController.xib */,
 				19CC96E417071E7000D70DF0 /* MainStoryboard.storyboard */,
 				19CC96DC17071E7000D70DF0 /* RaceAppDelegate.m */,
 				19CC96DB17071E7000D70DF0 /* RaceAppDelegate.h */,
@@ -419,6 +432,9 @@
 				8C0F86F2172EDA51008B9656 /* ParticipantsListViewController.m */,
 				8C0F86F4172EDAC5008B9656 /* ParticipantCell.h */,
 				8C0F86F5172EDAC5008B9656 /* ParticipantCell.m */,
+				19075C21173FF4B60043CC0D /* InRaceViewController.h */,
+				19075C22173FF4B70043CC0D /* InRaceViewController.m */,
+				19075C23173FF4B70043CC0D /* InRaceViewController.xib */,
 			);
 			path = JustRace;
 			sourceTree = "<group>";
@@ -532,6 +548,8 @@
 				19075BF3171749BE0043CC0D /* whiteButtonHighlight@2x.png in Resources */,
 				19075BF5171751E00043CC0D /* silver-button-normal.png in Resources */,
 				19075BF91722A0990043CC0D /* GoogleMaps.bundle in Resources */,
+				19075C1F173FDC390043CC0D /* LiveViewController.xib in Resources */,
+				19075C25173FF4B80043CC0D /* InRaceViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,6 +587,8 @@
 				8C79C2C81725708C00013FAB /* GlobalVariables.m in Sources */,
 				8C0F86F3172EDA51008B9656 /* ParticipantsListViewController.m in Sources */,
 				8C0F86F6172EDAC6008B9656 /* ParticipantCell.m in Sources */,
+				19075C1E173FDC390043CC0D /* LiveViewController.m in Sources */,
+				19075C24173FF4B80043CC0D /* InRaceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

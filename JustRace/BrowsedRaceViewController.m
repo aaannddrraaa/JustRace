@@ -101,6 +101,40 @@
     [pt setObject:[[PFUser currentUser] username] forKey:@"username"];
     [pt saveInBackground];
     
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
+    
+    // Break the date up into components
+    NSDateComponents *dateComponents = [calendar components:( NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit ) fromDate:[race objectForKey:@"raceDate"]];
+    NSDateComponents *timeComponents = [calendar components:( NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit ) fromDate:[race objectForKey:@"raceTime"]];
+    
+    // Set up the fire time
+    NSDateComponents *dateComps = [[NSDateComponents alloc] init];
+    [dateComps setDay:[dateComponents day]];
+    [dateComps setMonth:[dateComponents month]];
+    [dateComps setYear:[dateComponents year]];
+    [dateComps setHour:[timeComponents hour]];
+	// Notification will fire in one minute
+    [dateComps setMinute:[timeComponents minute]];
+	[dateComps setSecond:[timeComponents second]];
+    NSDate *itemDate = [calendar dateFromComponents:dateComps];
+    
+    //cu 5 minute inainte
+    itemDate = [itemDate addTimeInterval:-(60*5)];
+    
+    notification.fireDate = itemDate;
+    notification.timeZone = [NSTimeZone defaultTimeZone];
+    
+    notification.alertBody = [NSString stringWithFormat:@"Race %@ is about to start!",[race objectForKey:@"raceName"]];
+    notification.alertAction = @"START";
+    notification.soundName = UILocalNotificationDefaultSoundName;
+    
+    NSDictionary *infoDict = [NSDictionary dictionaryWithObject:[race objectForKey:@"raceName"] forKey:@"raceName"];
+    notification.userInfo = infoDict;
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+    
+    
     UILabel *part= [[UILabel alloc] initWithFrame:CGRectMake(20, 330, self.view.frame.size.width - 40, 45)];
     part.text = @"You joined this race! Good luck!";
     [part setFont:[UIFont boldSystemFontOfSize:17.0]];

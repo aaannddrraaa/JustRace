@@ -168,7 +168,46 @@
     [race setObject:self.raceTime forKey:@"raceTime"];
     [race setObject:[[PFUser currentUser] username]  forKey:@"username"];
     [race setObject:self.racePath forKey:@"racePath"];
-    [race save];
+    [race saveInBackground];
+    
+    PFObject *pt = [PFObject objectWithClassName:@"Participation"];
+    [pt setObject:raceNameTextField.text forKey:@"raceName"];
+    [pt setObject:[[PFUser currentUser] username] forKey:@"username"];
+    [pt saveInBackground];
+    
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
+    
+    // Break the date up into components
+    NSDateComponents *dateComponents = [calendar components:( NSYearCalendarUnit | NSMonthCalendarUnit |  NSDayCalendarUnit ) fromDate:raceDate];
+    NSDateComponents *timeComponents = [calendar components:( NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit ) fromDate:raceTime];
+    
+    // Set up the fire time
+    NSDateComponents *dateComps = [[NSDateComponents alloc] init];
+    [dateComps setDay:[dateComponents day]];
+    [dateComps setMonth:[dateComponents month]];
+    [dateComps setYear:[dateComponents year]];
+    [dateComps setHour:[timeComponents hour]];
+	// Notification will fire in one minute
+    [dateComps setMinute:[timeComponents minute]];
+	[dateComps setSecond:[timeComponents second]];
+    NSDate *itemDate = [calendar dateFromComponents:dateComps];
+    
+    //cu 5 minute inainte
+    itemDate = [itemDate addTimeInterval:-(60*5)];
+    
+    notification.fireDate = itemDate;
+    notification.timeZone = [NSTimeZone defaultTimeZone];
+    
+    notification.alertBody = [NSString stringWithFormat:@"Race %@ is about to start!",self.raceNameTextField.text];
+    notification.alertAction = @"START";
+    notification.soundName = UILocalNotificationDefaultSoundName;
+    
+    NSDictionary *infoDict = [NSDictionary dictionaryWithObject:raceNameTextField.text forKey:@"raceName"];
+    notification.userInfo = infoDict;
+    
+    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 

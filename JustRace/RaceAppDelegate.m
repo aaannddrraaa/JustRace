@@ -8,6 +8,7 @@
 
 #import "RaceAppDelegate.h"
 #import <Parse/Parse.h>
+#import "LiveViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import <GoogleMaps/GoogleMaps.h>
 
@@ -21,9 +22,21 @@
                   clientKey:@"ZtFSnMfnfyGLU0KznbUCoIlLeZhOgQbrf4PBUNdl"];
     [PFFacebookUtils initializeFacebook];
     [GMSServices provideAPIKey:@"AIzaSyCTtphm7zpgaealiUN1S5alkBdAYv98FDs"];
+    
+    UILocalNotification *localNotif =
+    [launchOptions objectForKey:UIApplicationLaunchOptionsLocalNotificationKey];
+    if (localNotif) {
+        NSLog(@"launched with notification");
+        LiveViewController *live = [[LiveViewController alloc] initWithRace:[localNotif.userInfo objectForKey:@"raceName"]];
+        UINavigationController *nvcontrol = [[UINavigationController alloc] initWithRootViewController:live];
+        
+        [self.window addSubview:nvcontrol.view];
+        [self.window makeKeyAndVisible]; 
+    }
     return YES;
 }
-							
+
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -54,6 +67,34 @@
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
   sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
     return [PFFacebookUtils handleOpenURL:url];
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification
+{
+    self.lastNotification = notification;
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Get ready!"
+                                                        message:@"A new race is about to start."
+                                                       delegate:self cancelButtonTitle:@"Give up"
+                                              otherButtonTitles:nil];
+    [alertView addButtonWithTitle:@"To race"];
+    [alertView show];
+  
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if([alertView buttonTitleAtIndex:buttonIndex] == @"Give up")
+    {
+        [alertView dismissWithClickedButtonIndex:buttonIndex animated:YES];
+    }
+    else
+    {
+        LiveViewController *live = [[LiveViewController alloc] initWithRace:[self.lastNotification.userInfo objectForKey:@"raceName"]];
+        UINavigationController *nvcontrol = [[UINavigationController alloc] initWithRootViewController:live];
+        [self.window addSubview:nvcontrol.view];
+        [self.window makeKeyAndVisible];
+        [alertView dismissWithClickedButtonIndex:buttonIndex animated:YES];
+    }
 }
 
 @end

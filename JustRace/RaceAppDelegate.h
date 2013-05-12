@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RaceAppDelegate : UIResponder <UIApplicationDelegate>
+@interface RaceAppDelegate : UIResponder <UIApplicationDelegate, UIAlertViewDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) UILocalNotification *lastNotification;
 @end
