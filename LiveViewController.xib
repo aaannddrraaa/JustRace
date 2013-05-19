@@ -10781,6 +10781,20 @@ AAEAAQABA</bytes>
 				<object class="IBPartialClassDescription">
 					<string key="className">LiveViewController</string>
 					<string key="superclassName">UIViewController</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="giveUp:">id</string>
+						<string key="tick:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="giveUp:">
+							<string key="name">giveUp:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="tick:">
+							<string key="name">tick:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="minutesLeft">UILabel</string>
 						<string key="raceNameLabel">UILabel</string>

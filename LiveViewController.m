@@ -84,8 +84,8 @@ NSTimer *timer;
 {
     if(timeLeft>0)
     {
-        timeLeft--;
-        //timeLeft = timeLeft - 100;
+        //timeLeft--;
+        timeLeft = timeLeft - 100;
         self.secondsLeft.text = [NSString stringWithFormat:@"%02d", timeLeft % 60];
         self.minutesLeft.text = [NSString stringWithFormat:@"%02d", timeLeft / 60];
     }
@@ -93,10 +93,10 @@ NSTimer *timer;
     {
         [timer invalidate];
         InRaceViewController *raceView = [[InRaceViewController alloc] initWithRace:self.raceName];
-        UINavigationController *navController = self.navigationController;
-        [self.navigationController popViewControllerAnimated:YES];
-        [navController pushViewController:raceView animated:YES];
-       // [UIApplication sharedApplication]
+        UINavigationController *nvcontrol = [[UINavigationController alloc] initWithRootViewController:raceView];
+        [[[[UIApplication sharedApplication] delegate] window] addSubview:nvcontrol.view];
+        [[[[UIApplication sharedApplication] delegate] window]
+         makeKeyAndVisible];
     }
     
 }
