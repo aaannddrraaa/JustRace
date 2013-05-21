@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SpeedViewController : UIViewController
+@interface SpeedViewController : UIViewController{
+    NSArray *parts;
+}
+@property (strong, nonatomic) IBOutlet UILabel *bestSpeed;
+@property (strong, nonatomic) IBOutlet UILabel *averageSpeed;
 
 @end

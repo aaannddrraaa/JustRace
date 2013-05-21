@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface TimeViewController : UIViewController
+@interface TimeViewController : UIViewController{
+    NSArray *parts;
+}
+@property (strong, nonatomic) IBOutlet UILabel *bestTime;
+@property (strong, nonatomic) IBOutlet UILabel *averageTime;
 
 @end

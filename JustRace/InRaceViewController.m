@@ -111,6 +111,23 @@ CLLocationDistance totalDistance = 0;
 {
     // do something with totalDistance
     // do something with NSArray of speed recordings
+    NSTimeInterval time = [start timeIntervalSinceNow];
+    time = time * (-1);
+    
+    PFQuery *query = [PFQuery queryWithClassName:@"Participation"];
+    [query whereKey:@"raceName" equalTo:self.raceName];
+    [query whereKey:@"username" equalTo:[[PFUser currentUser] username]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *data, NSError *error){
+        if (!error){
+            PFObject *part = [data objectAtIndex:0];
+            [part setObject:[NSNumber numberWithDouble:totalDistance] forKey:@"distance"];
+            [part setObject:[NSNumber numberWithDouble:time] forKey:@"time"];
+            [part setObject:[NSNumber numberWithDouble:totalDistance/time] forKey:@"speed"];
+            [part saveInBackground];
+        } else {
+            NSLog(@"eroare = %@",error);
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning

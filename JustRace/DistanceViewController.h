@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DistanceViewController : UIViewController
+@interface DistanceViewController : UIViewController{
+    NSArray *parts;
+}
+@property (strong, nonatomic) IBOutlet UILabel *bestDistance;
+@property (strong, nonatomic) IBOutlet UILabel *averageDistance;
 
 @end
