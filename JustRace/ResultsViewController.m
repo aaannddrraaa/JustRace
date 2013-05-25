@@ -78,32 +78,13 @@
     if (resultsList.count > 0){
         PFObject *result = (PFObject*)[resultsList objectAtIndex:indexPath.row];
         
-        PFQuery *secondQuery = [PFUser query];
-        [secondQuery whereKey:@"username" equalTo:[result objectForKey:@"username"]];
-        
-        [secondQuery findObjectsInBackgroundWithBlock:^(NSArray *data, NSError *error){
-            if (!error){
-                name = data;
-                NSLog(@"get data");
-                [tableView reloadData];
-            }else{
-                NSLog(@"eroare");
-            }
-        }];
-        
-        PFUser * pfusername = (PFUser*) [name objectAtIndex:0];
-        
-        NSString *username = [pfusername objectForKey:@"name"];
+        NSString *username = [result objectForKey:@"name"];
         NSString *time = [NSString stringWithFormat:@"%f", [result objectForKey:@"time"]];
         
         cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", username, time];
-        
-
     }
     
-   
-    
-    return cell;
+   return cell;
 }
 
 /*

@@ -173,6 +173,7 @@
     PFObject *pt = [PFObject objectWithClassName:@"Participation"];
     [pt setObject:raceNameTextField.text forKey:@"raceName"];
     [pt setObject:[[PFUser currentUser] username] forKey:@"username"];
+    [pt setObject:[[PFUser currentUser] objectForKey: @"name"] forKey:@"name"];
     [pt saveInBackground];
     
     UILocalNotification *notification = [[UILocalNotification alloc] init];
