@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ResultsViewController : UITableViewController
+@interface ResultsViewController : UITableViewController<
+UITableViewDataSource, UITableViewDelegate>{
+    NSDictionary *race;
+    NSArray *resultsList;
+}
+@property(nonatomic, strong) NSDictionary *race;
 
 @end

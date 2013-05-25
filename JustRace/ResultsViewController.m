@@ -7,12 +7,15 @@
 //
 
 #import "ResultsViewController.h"
+#import <Parse/Parse.h>
 
 @interface ResultsViewController ()
 
 @end
 
 @implementation ResultsViewController
+
+@synthesize race;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -27,11 +30,19 @@
 {
     [super viewDidLoad];
 
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    __block UITableView *tableView = self.tableView;
+    
+    PFQuery *firstQuery = [PFQuery queryWithClassName:@"Participation"];
+    [firstQuery whereKey:@"raceName" equalTo:[race objectForKey:@"raceName"]];
+    
+    [firstQuery findObjectsInBackgroundWithBlock:^(NSArray *data, NSError *error){
+        if (!error){
+            resultsList = data;
+            [tableView reloadData];
+        }else{
+            NSLog(@"eroare");
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning
@@ -46,14 +57,14 @@
 {
 #warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [resultsList count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -61,7 +72,36 @@
     static NSString *CellIdentifier = @"results";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
+    __block NSArray *name;
+    name = [[NSArray alloc] init];
+    
+    if (resultsList.count > 0){
+        PFObject *result = (PFObject*)[resultsList objectAtIndex:indexPath.row];
+        
+        PFQuery *secondQuery = [PFUser query];
+        [secondQuery whereKey:@"username" equalTo:[result objectForKey:@"username"]];
+        
+        [secondQuery findObjectsInBackgroundWithBlock:^(NSArray *data, NSError *error){
+            if (!error){
+                name = data;
+                NSLog(@"get data");
+                [tableView reloadData];
+            }else{
+                NSLog(@"eroare");
+            }
+        }];
+        
+        PFUser * pfusername = (PFUser*) [name objectAtIndex:0];
+        
+        NSString *username = [pfusername objectForKey:@"name"];
+        NSString *time = [NSString stringWithFormat:@"%f", [result objectForKey:@"time"]];
+        
+        cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", username, time];
+        
+
+    }
+    
+   
     
     return cell;
 }

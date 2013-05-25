@@ -35,18 +35,6 @@
     
     PFQuery *firstQuery = [PFQuery queryWithClassName:@"Participation"];
     [firstQuery whereKey:@"raceName" equalTo:[race objectForKey:@"raceName"]];
-    //query ia toate username-urile pt cursa respectiva => eu vreau NUMELE, nu username-ul
-    
-        
-    /*[query findObjectsInBackgroundWithBlock:^(NSArray *data, NSError *error){
-        if (!error){
-            participantsList = data;
-            NSLog(@"nr participanti = %d", participantsList.count);
-            [tableView reloadData];
-        }else{
-            NSLog(@"eroare");
-        }
-    }];*/
     
     PFQuery *secondQuery = [PFUser query];
     [secondQuery whereKey:@"username" matchesKey:@"username" inQuery:firstQuery];
