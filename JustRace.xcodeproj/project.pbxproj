@@ -86,6 +86,8 @@
 		8C0F86EA172EC7B2008B9656 /* login-button-small.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C0F86E9172EC7B1008B9656 /* login-button-small.png */; };
 		8C0F86F3172EDA51008B9656 /* ParticipantsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C0F86F2172EDA51008B9656 /* ParticipantsListViewController.m */; };
 		8C0F86F6172EDAC6008B9656 /* ParticipantCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C0F86F5172EDAC5008B9656 /* ParticipantCell.m */; };
+		8C1268C61750C4A800F8294E /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C1268C51750C4A800F8294E /* ResultsViewController.m */; };
+		8C1268C91750C4E000F8294E /* ResultsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C1268C81750C4E000F8294E /* ResultsCell.m */; };
 		8C3150CA170C17C300A39561 /* RacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3150C9170C17C300A39561 /* RacesViewController.m */; };
 		8C3150CD170C1B6600A39561 /* MyRacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3150CC170C1B6600A39561 /* MyRacesViewController.m */; };
 		8C3150D0170C1BC200A39561 /* StatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3150CF170C1BC200A39561 /* StatisticsViewController.m */; };
@@ -201,6 +203,10 @@
 		8C0F86F2172EDA51008B9656 /* ParticipantsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParticipantsListViewController.m; sourceTree = "<group>"; };
 		8C0F86F4172EDAC5008B9656 /* ParticipantCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParticipantCell.h; sourceTree = "<group>"; };
 		8C0F86F5172EDAC5008B9656 /* ParticipantCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParticipantCell.m; sourceTree = "<group>"; };
+		8C1268C41750C4A800F8294E /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
+		8C1268C51750C4A800F8294E /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
+		8C1268C71750C4E000F8294E /* ResultsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsCell.h; sourceTree = "<group>"; };
+		8C1268C81750C4E000F8294E /* ResultsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsCell.m; sourceTree = "<group>"; };
 		8C3150C8170C17C300A39561 /* RacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RacesViewController.h; sourceTree = "<group>"; };
 		8C3150C9170C17C300A39561 /* RacesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RacesViewController.m; sourceTree = "<group>"; };
 		8C3150CB170C1B6600A39561 /* MyRacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyRacesViewController.h; sourceTree = "<group>"; };
@@ -443,6 +449,10 @@
 				8C6EFE4B1750A4E00048462C /* FinishedRaceViewController.h */,
 				8C6EFE4C1750A4E00048462C /* FinishedRaceViewController.m */,
 				8C6EFE4D1750A4E00048462C /* FinishedRaceViewController.xib */,
+				8C1268C41750C4A800F8294E /* ResultsViewController.h */,
+				8C1268C51750C4A800F8294E /* ResultsViewController.m */,
+				8C1268C71750C4E000F8294E /* ResultsCell.h */,
+				8C1268C81750C4E000F8294E /* ResultsCell.m */,
 			);
 			path = JustRace;
 			sourceTree = "<group>";
@@ -599,6 +609,8 @@
 				19075C1E173FDC390043CC0D /* LiveViewController.m in Sources */,
 				19075C24173FF4B80043CC0D /* InRaceViewController.m in Sources */,
 				8C6EFE4E1750A4E00048462C /* FinishedRaceViewController.m in Sources */,
+				8C1268C61750C4A800F8294E /* ResultsViewController.m in Sources */,
+				8C1268C91750C4E000F8294E /* ResultsCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
