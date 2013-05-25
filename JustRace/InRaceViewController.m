@@ -7,6 +7,7 @@
 //
 
 #import "InRaceViewController.h"
+#import "RaceAppDelegate.h"
 #import "FinishedRaceViewController.h"
 #import <Parse/Parse.h>
 #import <GoogleMaps/GoogleMaps.h>
@@ -23,6 +24,8 @@ NSDate *start;
 NSMutableArray *speeds;
 CLLocationDistance totalDistance = 0;
 CLLocation *finishLine;
+CLLocationManager *locationManager;
+int finished=0;
 
 @synthesize raceName;
 
@@ -60,51 +63,50 @@ CLLocation *finishLine;
             GMSMutablePath *path = [[GMSPath pathFromEncodedPath:[race objectForKey:@"racePath"]] mutableCopy];
             CLLocationCoordinate2D coord = [path coordinateAtIndex:([path count]-1)];
             finishLine = [[CLLocation alloc] initWithLatitude:coord.latitude  longitude:coord.longitude];
-           
+            
         } else {
             NSLog(@"eroare = %@",error);
         }
     }];
     
+    locationManager=[[CLLocationManager alloc]init];
+    locationManager.delegate=self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    locationManager.distanceFilter = 1.0;
+    [locationManager startUpdatingLocation];
+    
     start = [NSDate date];
     timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(tick:) userInfo:nil repeats:YES];
-    
-    
-    CLLocationManager *locationManager=[[CLLocationManager alloc]init];
-    locationManager.delegate=self;
-    [locationManager startUpdatingLocation];
-    // [locationManager setDistanceFilter:5.0];
     
     // Do any additional setup after loading the view from its nib.
 }
 
--(void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
-{
-    CLLocation *newLocation = [locations lastObject];
-     
-}
-
 -(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation
           fromLocation:(CLLocation *)oldLocation{
-    
-        if ([newLocation distanceFromLocation:finishLine] <= 5.0) {
-            [timer invalidate];
-            [manager stopUpdatingLocation];
-            [self finishRace];
-        }
-        else
-        {
-            [speeds addObject:[NSNumber numberWithDouble:newLocation.speed]];
-            double dist = [newLocation getDistanceFrom:oldLocation];
-            totalDistance += dist;
-            self.distance.text = [NSString stringWithFormat:@"%.0f",dist];
-            self.speed.text = [NSString stringWithFormat:@"%.1f",newLocation.speed];
-        }
+    if (abs((int)[newLocation distanceFromLocation:finishLine]) <= 5.0) {
+        finished = 1;
+    }
+    else
+    {
+        [speeds addObject:[NSNumber numberWithDouble:newLocation.speed]];
+        double dist = [newLocation getDistanceFrom:oldLocation];
+        totalDistance += dist;
+        self.distance.text = [NSString stringWithFormat:@"%.0f",dist];
+        self.speed.text = [NSString stringWithFormat:@"%.1f",newLocation.speed];
+    }
     
 }
 
 -(IBAction)tick:(id)sender
 {
+    NSLog(@"%f",[locationManager.location distanceFromLocation:finishLine]);
+    if (abs((int)[locationManager.location distanceFromLocation:finishLine]) <= 5.0 || finished == 1) {
+        [timer invalidate];
+        [locationManager stopUpdatingLocation];
+        [self finishRace];
+        return;
+    }
+    
     NSTimeInterval time = [start timeIntervalSinceNow];
     time = time * (-1);
     
@@ -122,6 +124,7 @@ CLLocation *finishLine;
     
     NSTimeInterval time = [start timeIntervalSinceNow];
     time = time * (-1);
+    if(time<=100) time = 100;
     
     PFQuery *query = [PFQuery queryWithClassName:@"Participation"];
     [query whereKey:@"raceName" equalTo:self.raceName];
@@ -138,18 +141,10 @@ CLLocation *finishLine;
         }
     }];
     
-    FinishedRaceViewController *raceView = [[FinishedRaceViewController alloc] init];
-    raceView.speed.text = [NSString stringWithFormat:@"%.1f",totalDistance/time];
-    float t1 = floor(time / 3600);
-    time = round(time - 3600*floor(time / 3600));
-    float t2 = floor(time / 60);
-    time = round(time - 60*floor(time / 60));
-    raceView.time.text = [NSString stringWithFormat:@"%02.0f:%02.0f:%02.0f", t1, t2, time];
+    FinishedRaceViewController *raceView = [[FinishedRaceViewController alloc] initWithTime:time speed:totalDistance/time];
     
-    UINavigationController *nvcontrol = [[UINavigationController alloc] initWithRootViewController:raceView];
-    [[[[UIApplication sharedApplication] delegate] window] addSubview:nvcontrol.view];
-    [[[[UIApplication sharedApplication] delegate] window]
-     makeKeyAndVisible];
+    [((RaceAppDelegate *)[[UIApplication sharedApplication] delegate]).nvcontrol pushViewController:raceView animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning

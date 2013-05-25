@@ -8,6 +8,7 @@
 
 #import "LiveViewController.h"
 #import "InRaceViewController.h"
+#import "RaceAppDelegate.h"
 #import <Parse/Parse.h>
 
 @interface LiveViewController ()
@@ -93,10 +94,7 @@ NSTimer *timer;
     {
         [timer invalidate];
         InRaceViewController *raceView = [[InRaceViewController alloc] initWithRace:self.raceName];
-        UINavigationController *nvcontrol = [[UINavigationController alloc] initWithRootViewController:raceView];
-        [[[[UIApplication sharedApplication] delegate] window] addSubview:nvcontrol.view];
-        [[[[UIApplication sharedApplication] delegate] window]
-         makeKeyAndVisible];
+        [((RaceAppDelegate *)[[UIApplication sharedApplication] delegate]).nvcontrol pushViewController:raceView animated:YES];
     }
     
 }

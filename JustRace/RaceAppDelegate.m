@@ -13,6 +13,7 @@
 #import <GoogleMaps/GoogleMaps.h>
 
 @implementation RaceAppDelegate
+@synthesize nvcontrol;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -28,10 +29,10 @@
     if (localNotif) {
         NSLog(@"launched with notification");
         LiveViewController *live = [[LiveViewController alloc] initWithRace:[localNotif.userInfo objectForKey:@"raceName"]];
-        UINavigationController *nvcontrol = [[UINavigationController alloc] initWithRootViewController:live];
+        nvcontrol = [[UINavigationController alloc] initWithRootViewController:live];
         
         [self.window addSubview:nvcontrol.view];
-        [self.window makeKeyAndVisible]; 
+        [self.window makeKeyAndVisible];
     }
     return YES;
 }
@@ -45,7 +46,7 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
+    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
@@ -78,7 +79,7 @@
                                               otherButtonTitles:nil];
     [alertView addButtonWithTitle:@"To race"];
     [alertView show];
-  
+    
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -90,7 +91,7 @@
     else
     {
         LiveViewController *live = [[LiveViewController alloc] initWithRace:[self.lastNotification.userInfo objectForKey:@"raceName"]];
-        UINavigationController *nvcontrol = [[UINavigationController alloc] initWithRootViewController:live];
+        nvcontrol = [[UINavigationController alloc] initWithRootViewController:live];
         [self.window addSubview:nvcontrol.view];
         [self.window makeKeyAndVisible];
         [alertView dismissWithClickedButtonIndex:buttonIndex animated:YES];
