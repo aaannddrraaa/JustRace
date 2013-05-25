@@ -7,8 +7,10 @@
 //
 
 #import "InRaceViewController.h"
+#import "FinishedRaceViewController.h"
 #import <Parse/Parse.h>
 #import <GoogleMaps/GoogleMaps.h>
+#include <stdlib.h>
 
 @interface InRaceViewController ()
 
@@ -20,6 +22,7 @@ NSTimer *timer;
 NSDate *start;
 NSMutableArray *speeds;
 CLLocationDistance totalDistance = 0;
+CLLocation *finishLine;
 
 @synthesize raceName;
 
@@ -49,20 +52,14 @@ CLLocationDistance totalDistance = 0;
     self.speed.text = @"0.0";
     self.distance.text = @"0";
     
-    CLLocationManager *locationManager=[[CLLocationManager alloc]init];
-    locationManager.delegate=self;
-    [locationManager startUpdatingLocation];
-    [locationManager setDistanceFilter:10.0];
-    
     PFQuery *query = [PFQuery queryWithClassName:@"Race"];
     [query whereKey:@"raceName" equalTo:self.raceName];
     [query findObjectsInBackgroundWithBlock:^(NSArray *data, NSError *error){
         if (!error){
             PFObject *race = [data objectAtIndex:0];
             GMSMutablePath *path = [[GMSPath pathFromEncodedPath:[race objectForKey:@"racePath"]] mutableCopy];
-            CLLocationCoordinate2D finishLine = [path coordinateAtIndex:([path count]-1)];
-            CLRegion *region = [[CLRegion alloc] initCircularRegionWithCenter:finishLine radius:5.0 identifier:@"finish"];
-            [locationManager startMonitoringForRegion:region];
+            CLLocationCoordinate2D coord = [path coordinateAtIndex:([path count]-1)];
+            finishLine = [[CLLocation alloc] initWithLatitude:coord.latitude  longitude:coord.longitude];
            
         } else {
             NSLog(@"eroare = %@",error);
@@ -72,27 +69,38 @@ CLLocationDistance totalDistance = 0;
     start = [NSDate date];
     timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(tick:) userInfo:nil repeats:YES];
     
+    
+    CLLocationManager *locationManager=[[CLLocationManager alloc]init];
+    locationManager.delegate=self;
+    [locationManager startUpdatingLocation];
+    // [locationManager setDistanceFilter:5.0];
+    
     // Do any additional setup after loading the view from its nib.
 }
 
-- (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region
+-(void) locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations
 {
-    [timer invalidate];
-    [manager stopMonitoringForRegion:region];
-    [manager stopUpdatingLocation];
-    [self finishRace];
+    CLLocation *newLocation = [locations lastObject];
+     
 }
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation
           fromLocation:(CLLocation *)oldLocation{
-    if(newLocation.speed != -1.0)
-    {
-    [speeds addObject:[NSNumber numberWithDouble:newLocation.speed]];
-    double dist = [newLocation getDistanceFrom:oldLocation];
-    totalDistance += dist;
-    self.distance.text = [NSString stringWithFormat:@"%.0f",dist];
-    self.speed.text = [NSString stringWithFormat:@"%.1f",newLocation.speed];
-    }
+    
+        if ([newLocation distanceFromLocation:finishLine] <= 5.0) {
+            [timer invalidate];
+            [manager stopUpdatingLocation];
+            [self finishRace];
+        }
+        else
+        {
+            [speeds addObject:[NSNumber numberWithDouble:newLocation.speed]];
+            double dist = [newLocation getDistanceFrom:oldLocation];
+            totalDistance += dist;
+            self.distance.text = [NSString stringWithFormat:@"%.0f",dist];
+            self.speed.text = [NSString stringWithFormat:@"%.1f",newLocation.speed];
+        }
+    
 }
 
 -(IBAction)tick:(id)sender
@@ -109,8 +117,9 @@ CLLocationDistance totalDistance = 0;
 
 -(void)finishRace
 {
-    // do something with totalDistance
-    // do something with NSArray of speed recordings
+    int r = arc4random() % 10;
+    totalDistance = 1000 * r;
+    
     NSTimeInterval time = [start timeIntervalSinceNow];
     time = time * (-1);
     
@@ -128,6 +137,19 @@ CLLocationDistance totalDistance = 0;
             NSLog(@"eroare = %@",error);
         }
     }];
+    
+    FinishedRaceViewController *raceView = [[FinishedRaceViewController alloc] init];
+    raceView.speed.text = [NSString stringWithFormat:@"%.1f",totalDistance/time];
+    float t1 = floor(time / 3600);
+    time = round(time - 3600*floor(time / 3600));
+    float t2 = floor(time / 60);
+    time = round(time - 60*floor(time / 60));
+    raceView.time.text = [NSString stringWithFormat:@"%02.0f:%02.0f:%02.0f", t1, t2, time];
+    
+    UINavigationController *nvcontrol = [[UINavigationController alloc] initWithRootViewController:raceView];
+    [[[[UIApplication sharedApplication] delegate] window] addSubview:nvcontrol.view];
+    [[[[UIApplication sharedApplication] delegate] window]
+     makeKeyAndVisible];
 }
 
 - (void)didReceiveMemoryWarning

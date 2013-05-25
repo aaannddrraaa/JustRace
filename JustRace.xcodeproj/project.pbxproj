@@ -95,6 +95,8 @@
 		8C3150DC170C1D3F00A39561 /* AllAttendedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3150DB170C1D3F00A39561 /* AllAttendedViewController.m */; };
 		8C3150DF170C1D6400A39561 /* AllActiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3150DE170C1D6400A39561 /* AllActiveViewController.m */; };
 		8C3150E2170C1D8800A39561 /* AllOrganisedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C3150E1170C1D8800A39561 /* AllOrganisedViewController.m */; };
+		8C6EFE4E1750A4E00048462C /* FinishedRaceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C6EFE4C1750A4E00048462C /* FinishedRaceViewController.m */; };
+		8C6EFE4F1750A4E00048462C /* FinishedRaceViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C6EFE4D1750A4E00048462C /* FinishedRaceViewController.xib */; };
 		8C79C2C81725708C00013FAB /* GlobalVariables.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C79C2C71725708C00013FAB /* GlobalVariables.m */; };
 		8CE049E81713167000A9D4BC /* AllRacesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE049E71713167000A9D4BC /* AllRacesViewController.m */; };
 		8CE049EB1713196D00A9D4BC /* OrganisedRaceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CE049EA1713196D00A9D4BC /* OrganisedRaceCell.m */; };
@@ -217,6 +219,9 @@
 		8C3150DE170C1D6400A39561 /* AllActiveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllActiveViewController.m; sourceTree = "<group>"; };
 		8C3150E0170C1D8800A39561 /* AllOrganisedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllOrganisedViewController.h; sourceTree = "<group>"; };
 		8C3150E1170C1D8800A39561 /* AllOrganisedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AllOrganisedViewController.m; sourceTree = "<group>"; };
+		8C6EFE4B1750A4E00048462C /* FinishedRaceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FinishedRaceViewController.h; sourceTree = "<group>"; };
+		8C6EFE4C1750A4E00048462C /* FinishedRaceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FinishedRaceViewController.m; sourceTree = "<group>"; };
+		8C6EFE4D1750A4E00048462C /* FinishedRaceViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FinishedRaceViewController.xib; sourceTree = "<group>"; };
 		8C79C2C61725708C00013FAB /* GlobalVariables.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalVariables.h; sourceTree = "<group>"; };
 		8C79C2C71725708C00013FAB /* GlobalVariables.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalVariables.m; sourceTree = "<group>"; };
 		8CE049E61713167000A9D4BC /* AllRacesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AllRacesViewController.h; sourceTree = "<group>"; };
@@ -435,6 +440,9 @@
 				19075C21173FF4B60043CC0D /* InRaceViewController.h */,
 				19075C22173FF4B70043CC0D /* InRaceViewController.m */,
 				19075C23173FF4B70043CC0D /* InRaceViewController.xib */,
+				8C6EFE4B1750A4E00048462C /* FinishedRaceViewController.h */,
+				8C6EFE4C1750A4E00048462C /* FinishedRaceViewController.m */,
+				8C6EFE4D1750A4E00048462C /* FinishedRaceViewController.xib */,
 			);
 			path = JustRace;
 			sourceTree = "<group>";
@@ -550,6 +558,7 @@
 				19075BF91722A0990043CC0D /* GoogleMaps.bundle in Resources */,
 				19075C1F173FDC390043CC0D /* LiveViewController.xib in Resources */,
 				19075C25173FF4B80043CC0D /* InRaceViewController.xib in Resources */,
+				8C6EFE4F1750A4E00048462C /* FinishedRaceViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,6 +598,7 @@
 				8C0F86F6172EDAC6008B9656 /* ParticipantCell.m in Sources */,
 				19075C1E173FDC390043CC0D /* LiveViewController.m in Sources */,
 				19075C24173FF4B80043CC0D /* InRaceViewController.m in Sources */,
+				8C6EFE4E1750A4E00048462C /* FinishedRaceViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
