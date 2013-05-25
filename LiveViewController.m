@@ -85,8 +85,8 @@ NSTimer *timer;
 {
     if(timeLeft>0)
     {
-        //timeLeft--;
-        timeLeft = timeLeft - 100;
+        timeLeft--;
+        //timeLeft = timeLeft - 100;
         self.secondsLeft.text = [NSString stringWithFormat:@"%02d", timeLeft % 60];
         self.minutesLeft.text = [NSString stringWithFormat:@"%02d", timeLeft / 60];
     }

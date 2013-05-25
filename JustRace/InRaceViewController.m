@@ -64,26 +64,29 @@ int finished=0;
             CLLocationCoordinate2D coord = [path coordinateAtIndex:([path count]-1)];
             finishLine = [[CLLocation alloc] initWithLatitude:coord.latitude  longitude:coord.longitude];
             
+            locationManager=[[CLLocationManager alloc]init];
+            locationManager.delegate=self;
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+            locationManager.distanceFilter = 1.0;
+            [locationManager startUpdatingLocation];
+            
+            start = [NSDate date];
+            timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(tick:) userInfo:nil repeats:YES];
         } else {
             NSLog(@"eroare = %@",error);
         }
     }];
     
-    locationManager=[[CLLocationManager alloc]init];
-    locationManager.delegate=self;
-    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    locationManager.distanceFilter = 1.0;
-    [locationManager startUpdatingLocation];
-    
-    start = [NSDate date];
-    timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(tick:) userInfo:nil repeats:YES];
+   
     
     // Do any additional setup after loading the view from its nib.
 }
 
 -(void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation
           fromLocation:(CLLocation *)oldLocation{
-    if (abs((int)[newLocation distanceFromLocation:finishLine]) <= 5.0) {
+    double d = [newLocation distanceFromLocation:finishLine];
+    if(d<0) d=d*(-1);
+    if (d <= 5.0) {
         finished = 1;
     }
     else
@@ -99,8 +102,7 @@ int finished=0;
 
 -(IBAction)tick:(id)sender
 {
-    NSLog(@"%f",[locationManager.location distanceFromLocation:finishLine]);
-    if (abs((int)[locationManager.location distanceFromLocation:finishLine]) <= 5.0 || finished == 1) {
+    if (finished == 1) {
         [timer invalidate];
         [locationManager stopUpdatingLocation];
         [self finishRace];
