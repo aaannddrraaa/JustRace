@@ -91,5 +91,8 @@
     [PFUser logOut]; 
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
+- (IBAction)callLogOut:(id)sender {
+    [self logoutButtonTouchHandler:nil];
+}
 
 @end

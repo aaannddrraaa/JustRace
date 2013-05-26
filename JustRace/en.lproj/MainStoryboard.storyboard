@@ -49,7 +49,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.2950100651" green="0.79565818700000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="TPO-cD-hOJ" firstAttribute="leading" secondItem="s8K-9l-13h" secondAttribute="leading" constant="86" id="d2j-2X-Hy2"/>
                                     <constraint firstItem="TPO-cD-hOJ" firstAttribute="top" secondItem="s8K-9l-13h" secondAttribute="top" constant="205" id="ytm-iZ-7Zw"/>
@@ -146,7 +146,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="FCL-CV-2zZ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="33L-84-72d"/>
                             <constraint firstAttribute="trailing" secondItem="FhP-TM-YMc" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="3Zw-QX-Drw"/>
@@ -267,7 +267,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.82826721434655648" green="0.96323873158265239" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Yqi-tH-c2D" firstAttribute="leading" secondItem="am3-V7-20L" secondAttribute="leading" type="default" id="1Qf-DD-afi"/>
                             <constraint firstItem="Yqi-tH-c2D" firstAttribute="leading" secondItem="hef-c6-Vje" secondAttribute="leading" constant="31" id="5yE-zG-kej"/>
@@ -324,6 +324,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="QCa-pK-35h" kind="push" id="iUo-Ki-Ihc"/>
                                 </connections>
@@ -421,7 +422,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="vLL-6b-46t" firstAttribute="top" secondItem="doz-nT-P29" secondAttribute="top" constant="97" id="1fL-Ju-VCJ"/>
                             <constraint firstItem="QJk-VF-Myr" firstAttribute="leading" secondItem="NoQ-Gm-gbV" secondAttribute="leading" type="default" id="1gD-dW-s2u"/>
@@ -476,6 +477,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -622,7 +624,7 @@ Aw
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Hk6-Nc-069" firstAttribute="top" secondItem="uBI-4j-cvA" secondAttribute="top" constant="82" id="63G-BH-N3R"/>
                             <constraint firstItem="lrC-FU-IU8" firstAttribute="baseline" secondItem="NSW-8I-VV0" secondAttribute="baseline" type="default" id="7rZ-8q-ySa"/>
@@ -706,6 +708,7 @@ Aw
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="kew-9f-0EX" kind="push" id="ujm-AF-DVT"/>
                                 </connections>
@@ -795,7 +798,7 @@ Aw
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="dI4-kL-Shu" firstAttribute="baseline" secondItem="aSl-up-Fkn" secondAttribute="baseline" type="default" id="2Z7-9o-pCl"/>
                             <constraint firstItem="aFi-XH-imx" firstAttribute="centerX" secondItem="FMi-0p-AH0" secondAttribute="centerX" type="default" id="8bt-4y-4df"/>
@@ -869,7 +872,7 @@ Aw
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="SD0-eS-ROi" firstAttribute="top" secondItem="aXe-sf-GI2" secondAttribute="top" constant="141" id="Gbf-RC-6St"/>
                             <constraint firstItem="pDc-1l-s3c" firstAttribute="leading" secondItem="aXe-sf-GI2" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="UrE-0e-xe2"/>
@@ -905,6 +908,7 @@ Aw
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <segue destination="oEc-3j-jQa" kind="push" id="dje-gi-Gcm"/>
                                 </connections>
@@ -1009,7 +1013,7 @@ Aw
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="nmB-fO-5Bw" firstAttribute="leading" secondItem="nH4-vh-TRb" secondAttribute="leading" type="default" id="0sJ-aN-o1e"/>
                             <constraint firstItem="nmB-fO-5Bw" firstAttribute="trailing" secondItem="nH4-vh-TRb" secondAttribute="trailing" type="default" id="44p-8B-i93"/>
@@ -1126,7 +1130,7 @@ Aw
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="K8n-Rc-ufY" firstAttribute="leading" secondItem="a5x-Et-GYD" secondAttribute="leading" type="default" id="2I7-tk-xeG"/>
                             <constraint firstItem="K8n-Rc-ufY" firstAttribute="centerX" secondItem="LiN-Sh-jx7" secondAttribute="centerX" type="default" id="7Qd-rt-dyY"/>
@@ -1143,7 +1147,11 @@ Aw
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Logged In" id="GPU-ub-X35">
-                        <barButtonItem key="rightBarButtonItem" title="Logout" style="plain" id="hiS-HP-QHA"/>
+                        <barButtonItem key="rightBarButtonItem" title="Logout" style="plain" id="hiS-HP-QHA">
+                            <connections>
+                                <action selector="callLogOut:" destination="flV-MU-mpY" id="mbD-HC-qxC"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="myImage" destination="ej0-B2-8gt" id="Th3-vg-Tlj"/>
@@ -1212,7 +1220,7 @@ Aw
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="LeT-L2-bOS" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="0Lu-gc-zE8"/>
                             <constraint firstItem="LeT-L2-bOS" firstAttribute="leading" secondItem="eOZ-6v-jQH" secondAttribute="leading" type="default" id="5W2-3x-LNg"/>
@@ -1272,7 +1280,7 @@ Aw
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="pjW-zD-kp0" firstAttribute="leading" secondItem="cLB-0U-Pko" secondAttribute="leading" type="default" id="07x-o1-sIk"/>
                             <constraint firstItem="BM5-qX-i57" firstAttribute="leading" secondItem="Z3l-UY-pfo" secondAttribute="leading" type="default" id="7KT-HN-JcX"/>
@@ -1339,7 +1347,7 @@ Aw
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="5v5-by-8sZ" firstAttribute="leading" secondItem="ZX7-fr-VJB" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="F2C-Ma-HOh"/>
                             <constraint firstAttribute="trailing" secondItem="5v5-by-8sZ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="H3d-tN-IQG"/>
@@ -1409,7 +1417,7 @@ Aw
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="saC-f0-JcA" firstAttribute="leading" secondItem="fn4-ff-D9z" secondAttribute="leading" type="default" id="2ut-Fu-GWT"/>
                             <constraint firstItem="4vo-Xg-7mD" firstAttribute="leading" secondItem="UtN-Up-Ftz" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="3eh-r5-Hem"/>
@@ -1563,6 +1571,9 @@ Aw
         </class>
         <class className="RaceViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RaceViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="loginButtonTouchHandler:"/>
+            </relationships>
         </class>
         <class className="RacesViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RacesViewController.h"/>
@@ -1601,7 +1612,7 @@ Aw
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="Quf-oA-peg"/>
+        <segue reference="VJs-en-Qcc"/>
         <segue reference="Huy-Kk-hto"/>
     </inferredMetricsTieBreakers>
 </document>
