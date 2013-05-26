@@ -105,6 +105,23 @@ NSTimer *timer;
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)giveUp:(id)sender {
+    PFQuery *query = [PFQuery queryWithClassName:@"Participation"];
+    [query whereKey:@"raceName" equalTo:self.raceName];
+    [query whereKey:@"username" equalTo:[[PFUser currentUser] username]];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *data, NSError *error){
+        if (!error){
+            PFObject *part = [data objectAtIndex:0];
+            [part deleteInBackground];
+        } else{
+            NSLog(@"eroare = %@",error);
+        }
+    }];
+    UIStoryboard *storyBoard;
+    UIViewController *storyboardViewController;
+    storyBoard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
+    storyboardViewController = [storyBoard instantiateViewControllerWithIdentifier:@"login"];
+    //  RaceViewController *raceView = [[RaceViewController alloc] init];
+    [((RaceAppDelegate *)[[UIApplication sharedApplication] delegate]).nvcontrol pushViewController:storyboardViewController animated:YES];
 }
 
 @end

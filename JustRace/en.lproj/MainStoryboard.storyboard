@@ -1084,20 +1084,6 @@ Aw
                                     <segue destination="RqT-sB-ErV" kind="push" id="l5t-Cq-rc2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8n-Rc-ufY" customClass="GradientButton">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="283" id="0aQ-lf-Az5"/>
-                                    <constraint firstAttribute="height" constant="47" id="MC8-2Y-rBB"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="Settings" backgroundImage="silver-button-normal.png">
-                                    <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LiN-Sh-jx7" customClass="GradientButton">
                                 <constraints>
                                     <constraint firstAttribute="width" constant="279" id="CmR-vN-ac2"/>
@@ -1119,6 +1105,7 @@ Aw
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="HR2-aJ-IxU"/>
+                                    <constraint firstAttribute="width" constant="285" id="RAj-1f-zdx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="18"/>
                                 <state key="normal" title="Races" backgroundImage="silver-button-normal.png">
@@ -1132,11 +1119,8 @@ Aw
                         </subviews>
                         <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="K8n-Rc-ufY" firstAttribute="leading" secondItem="a5x-Et-GYD" secondAttribute="leading" type="default" id="2I7-tk-xeG"/>
-                            <constraint firstItem="K8n-Rc-ufY" firstAttribute="centerX" secondItem="LiN-Sh-jx7" secondAttribute="centerX" type="default" id="7Qd-rt-dyY"/>
+                            <constraint firstItem="LiN-Sh-jx7" firstAttribute="centerX" secondItem="ccw-4e-PWA" secondAttribute="centerX" type="default" id="3uk-cI-rm8"/>
                             <constraint firstItem="Aau-W4-Hb6" firstAttribute="leading" secondItem="ej0-B2-8gt" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="94O-lR-f7y"/>
-                            <constraint firstAttribute="bottom" secondItem="K8n-Rc-ufY" secondAttribute="bottom" constant="109" id="9Z6-vW-8rk"/>
-                            <constraint firstItem="ccw-4e-PWA" firstAttribute="centerX" secondItem="K8n-Rc-ufY" secondAttribute="centerX" type="default" id="9hC-Mt-GaD"/>
                             <constraint firstItem="Aau-W4-Hb6" firstAttribute="top" secondItem="ej0-B2-8gt" secondAttribute="top" constant="25" id="OBs-po-meN"/>
                             <constraint firstAttribute="bottom" secondItem="LiN-Sh-jx7" secondAttribute="bottom" constant="15" id="Vp0-cb-XYh"/>
                             <constraint firstItem="ccw-4e-PWA" firstAttribute="top" secondItem="ej0-B2-8gt" secondAttribute="top" constant="139" id="ZhT-yT-6aI"/>
@@ -1256,19 +1240,6 @@ Aw
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ynd-ud-17B">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="48" id="RLC-rm-LRY"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="Time graphics" backgroundImage="silver-button-normal.png">
-                                    <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3l-UY-pfo">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1287,11 +1258,8 @@ Aw
                             <constraint firstAttribute="trailing" secondItem="Z3l-UY-pfo" secondAttribute="trailing" constant="27" id="IXg-8c-OgP"/>
                             <constraint firstItem="pjW-zD-kp0" firstAttribute="leading" secondItem="HBx-DP-Kpy" secondAttribute="leading" constant="7" id="IuU-kI-wNw"/>
                             <constraint firstItem="Z3l-UY-pfo" firstAttribute="baseline" secondItem="pjW-zD-kp0" secondAttribute="baseline" type="default" id="QWP-jU-Fvf"/>
-                            <constraint firstAttribute="bottom" secondItem="ynd-ud-17B" secondAttribute="bottom" constant="46" id="ZRc-63-tSx"/>
                             <constraint firstItem="pjW-zD-kp0" firstAttribute="top" secondItem="HBx-DP-Kpy" secondAttribute="top" constant="61" id="fVl-dU-NA6"/>
-                            <constraint firstItem="ynd-ud-17B" firstAttribute="leading" secondItem="HBx-DP-Kpy" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="k4h-8B-KJd"/>
                             <constraint firstItem="BM5-qX-i57" firstAttribute="top" secondItem="HBx-DP-Kpy" secondAttribute="top" constant="104" id="tA1-nm-iGJ"/>
-                            <constraint firstAttribute="trailing" secondItem="ynd-ud-17B" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="wsK-aK-mq7"/>
                             <constraint firstItem="cLB-0U-Pko" firstAttribute="top" secondItem="HBx-DP-Kpy" secondAttribute="top" constant="109" id="x0f-Qb-p4y"/>
                         </constraints>
                     </view>
@@ -1323,19 +1291,6 @@ Aw
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5v5-by-8sZ">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="ZON-99-iQ4"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="Distance graphics" backgroundImage="silver-button-normal.png">
-                                    <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RYh-4j-g7S">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1349,9 +1304,6 @@ Aw
                         </subviews>
                         <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="5v5-by-8sZ" firstAttribute="leading" secondItem="ZX7-fr-VJB" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="F2C-Ma-HOh"/>
-                            <constraint firstAttribute="trailing" secondItem="5v5-by-8sZ" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="H3d-tN-IQG"/>
-                            <constraint firstAttribute="bottom" secondItem="5v5-by-8sZ" secondAttribute="bottom" constant="50" id="Ipt-66-qqp"/>
                             <constraint firstItem="RYh-4j-g7S" firstAttribute="baseline" secondItem="aws-CP-9NY" secondAttribute="baseline" type="default" id="XbP-Wm-0n9"/>
                             <constraint firstItem="Ta8-oa-vev" firstAttribute="leading" secondItem="ZX7-fr-VJB" secondAttribute="leading" constant="13" id="cAl-X7-ca8"/>
                             <constraint firstItem="aws-CP-9NY" firstAttribute="top" secondItem="ZX7-fr-VJB" secondAttribute="top" constant="53" id="e2d-AQ-ouw"/>
@@ -1393,19 +1345,6 @@ Aw
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LcH-vQ-MJC">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="47" id="R7t-NQ-ix6"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <state key="normal" title="Speed graphics" backgroundImage="silver-button-normal.png">
-                                    <color key="titleColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fn4-ff-D9z">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1422,10 +1361,7 @@ Aw
                             <constraint firstItem="saC-f0-JcA" firstAttribute="leading" secondItem="fn4-ff-D9z" secondAttribute="leading" type="default" id="2ut-Fu-GWT"/>
                             <constraint firstItem="4vo-Xg-7mD" firstAttribute="leading" secondItem="UtN-Up-Ftz" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="3eh-r5-Hem"/>
                             <constraint firstItem="mzF-S2-S3F" firstAttribute="top" secondItem="fn4-ff-D9z" secondAttribute="top" type="default" id="55g-6O-wzv"/>
-                            <constraint firstItem="LcH-vQ-MJC" firstAttribute="leading" secondItem="UtN-Up-Ftz" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="AeJ-bK-8XQ"/>
                             <constraint firstItem="4vo-Xg-7mD" firstAttribute="top" secondItem="UtN-Up-Ftz" secondAttribute="top" constant="138" id="GfM-LR-rlp"/>
-                            <constraint firstAttribute="bottom" secondItem="LcH-vQ-MJC" secondAttribute="bottom" constant="49" id="HNg-Yc-Rd7"/>
-                            <constraint firstAttribute="trailing" secondItem="LcH-vQ-MJC" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="Q0Y-Dc-n1a"/>
                             <constraint firstItem="mzF-S2-S3F" firstAttribute="leading" secondItem="UtN-Up-Ftz" secondAttribute="leading" constant="48" id="TfC-ih-bhb"/>
                             <constraint firstItem="mzF-S2-S3F" firstAttribute="top" secondItem="UtN-Up-Ftz" secondAttribute="top" constant="63" id="iaj-84-NNZ"/>
                             <constraint firstItem="fn4-ff-D9z" firstAttribute="leading" secondItem="mzF-S2-S3F" secondAttribute="trailing" constant="8" symbolic="YES" type="default" id="lyn-XY-ARs"/>
@@ -1571,9 +1507,6 @@ Aw
         </class>
         <class className="RaceViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RaceViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="loginButtonTouchHandler:"/>
-            </relationships>
         </class>
         <class className="RacesViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/RacesViewController.h"/>

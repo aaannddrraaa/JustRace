@@ -84,13 +84,26 @@
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    if([alertView buttonTitleAtIndex:buttonIndex] == @"Give up")
+    NSString *raceName = [self.lastNotification.userInfo objectForKey:@"raceName"];
+    if([[alertView buttonTitleAtIndex:buttonIndex] isEqualToString:@"Give up"])
     {
         [alertView dismissWithClickedButtonIndex:buttonIndex animated:YES];
+        PFQuery *query = [PFQuery queryWithClassName:@"Participation"];
+        [query whereKey:@"raceName" equalTo:raceName];
+        [query whereKey:@"username" equalTo:[[PFUser currentUser] username]];
+        [query findObjectsInBackgroundWithBlock:^(NSArray *data, NSError *error){
+            if (!error){
+                PFObject *part = [data objectAtIndex:0];
+                [part deleteInBackground];
+            } else{
+                NSLog(@"eroare = %@",error);
+            }
+        }];
+        
     }
     else
     {
-        LiveViewController *live = [[LiveViewController alloc] initWithRace:[self.lastNotification.userInfo objectForKey:@"raceName"]];
+        LiveViewController *live = [[LiveViewController alloc] initWithRace:raceName];
         nvcontrol = [[UINavigationController alloc] initWithRootViewController:live];
         [self.window addSubview:nvcontrol.view];
         [self.window makeKeyAndVisible];

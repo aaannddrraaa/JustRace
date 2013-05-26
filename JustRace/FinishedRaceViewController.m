@@ -61,7 +61,7 @@
 }
 
 - (IBAction)clicked:(id)sender {
-    NSLog(@"button");
+   // NSLog(@"button");
     UIStoryboard *storyBoard;
     UIViewController *storyboardViewController;
     storyBoard = [UIStoryboard storyboardWithName:@"MainStoryboard" bundle:nil];
